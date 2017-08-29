@@ -1,0 +1,14 @@
+C:\Users\Nando\Documents\Visual Studio 2017\Projects\Projeto Fina lLp2\Hotel Britania\bin\Debug\Hotel Britania.exe.config
+C:\Users\Nando\Documents\Visual Studio 2017\Projects\Projeto Fina lLp2\Hotel Britania\bin\Debug\Hotel Britania.exe
+C:\Users\Nando\Documents\Visual Studio 2017\Projects\Projeto Fina lLp2\Hotel Britania\bin\Debug\Hotel Britania.pdb
+C:\Users\Nando\Documents\Visual Studio 2017\Projects\Projeto Fina lLp2\Hotel Britania\obj\Debug\Hotel Britania.csprojResolveAssemblyReference.cache
+C:\Users\Nando\Documents\Visual Studio 2017\Projects\Projeto Fina lLp2\Hotel Britania\obj\Debug\Hotel_Britania.frmCadastroFuncionario.resources
+C:\Users\Nando\Documents\Visual Studio 2017\Projects\Projeto Fina lLp2\Hotel Britania\obj\Debug\Hotel_Britania.Properties.Resources.resources
+C:\Users\Nando\Documents\Visual Studio 2017\Projects\Projeto Fina lLp2\Hotel Britania\obj\Debug\Hotel Britania.csproj.GenerateResource.Cache
+C:\Users\Nando\Documents\Visual Studio 2017\Projects\Projeto Fina lLp2\Hotel Britania\obj\Debug\Hotel Britania.csproj.CoreCompileInputs.cache
+C:\Users\Nando\Documents\Visual Studio 2017\Projects\Projeto Fina lLp2\Hotel Britania\obj\Debug\Hotel Britania.exe
+C:\Users\Nando\Documents\Visual Studio 2017\Projects\Projeto Fina lLp2\Hotel Britania\obj\Debug\Hotel Britania.pdb
+C:\Users\Nando\Documents\Visual Studio 2017\Projects\Projeto Fina lLp2\Hotel Britania\obj\Debug\Hotel_Britania.frmPrincipal.resources
+C:\Users\Nando\Documents\Visual Studio 2017\Projects\Projeto Fina lLp2\Hotel Britania\obj\Debug\Hotel_Britania.frmLogin.resources
+C:\Users\Nando\Documents\Visual Studio 2017\Projects\Projeto Fina lLp2\Hotel Britania\obj\Debug\Hotel_Britania.frmCadastrarHospede.resources
+C:\Users\Nando\Documents\Visual Studio 2017\Projects\Projeto Fina lLp2\Hotel Britania\obj\Debug\Hotel_Britania.frmRecuperarSenha.resources
