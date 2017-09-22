@@ -1,6 +1,6 @@
 ﻿namespace Hotel_Britania
 {
-    partial class frmRecuperarSenha
+    partial class FrmRecuperarSenha
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRecuperarSenha));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRecuperarSenha));
             this.btnEntrar = new System.Windows.Forms.Button();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
@@ -126,7 +126,10 @@
             this.Controls.Add(this.pcbKey);
             this.Controls.Add(this.lblBemVindo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmRecuperarSenha";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Recuperar Senha";
             ((System.ComponentModel.ISupportInitialize)(this.pcbKey)).EndInit();
             this.ResumeLayout(false);

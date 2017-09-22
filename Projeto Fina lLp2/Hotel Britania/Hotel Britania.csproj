@@ -45,52 +45,97 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmCadastrarFuncionario.cs">
+    <Compile Include="FrmCadastrarFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadastrarFuncionario.Designer.cs">
-      <DependentUpon>frmCadastrarFuncionario.cs</DependentUpon>
+    <Compile Include="FrmCadastrarFuncionario.Designer.cs">
+      <DependentUpon>FrmCadastrarFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCadastrasHospede.cs">
+    <Compile Include="FrmCadastrarHospede.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadastrasHospede.Designer.cs">
-      <DependentUpon>frmCadastrasHospede.cs</DependentUpon>
+    <Compile Include="FrmCadastrarHospede.Designer.cs">
+      <DependentUpon>FrmCadastrarHospede.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.cs">
+    <Compile Include="FrmCadastrarUnidadeHabitacional.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.cs">
-      <DependentUpon>frmLogin.cs</DependentUpon>
+    <Compile Include="FrmCadastrarUnidadeHabitacional.Designer.cs">
+      <DependentUpon>FrmCadastrarUnidadeHabitacional.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPrincipal.cs">
+    <Compile Include="FrmCheckin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPrincipal.Designer.cs">
-      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    <Compile Include="FrmCheckin.Designer.cs">
+      <DependentUpon>FrmCheckin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRecuperarSenha.cs">
+    <Compile Include="FrmCheckOut.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRecuperarSenha.Designer.cs">
-      <DependentUpon>frmRecuperarSenha.cs</DependentUpon>
+    <Compile Include="FrmCheckOut.Designer.cs">
+      <DependentUpon>FrmCheckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRecuperarSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRecuperarSenha.Designer.cs">
+      <DependentUpon>FrmRecuperarSenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRegistrarCheckIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistrarCheckIn.Designer.cs">
+      <DependentUpon>FrmRegistrarCheckIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRegistrarCheckOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistrarCheckOut.Designer.cs">
+      <DependentUpon>FrmRegistrarCheckOut.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmCadastrarFuncionario.resx">
-      <DependentUpon>frmCadastrarFuncionario.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCadastrarFuncionario.resx">
+      <DependentUpon>FrmCadastrarFuncionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCadastrasHospede.resx">
-      <DependentUpon>frmCadastrasHospede.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCadastrarHospede.resx">
+      <DependentUpon>FrmCadastrarHospede.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
-      <DependentUpon>frmLogin.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCadastrarUnidadeHabitacional.resx">
+      <DependentUpon>FrmCadastrarUnidadeHabitacional.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPrincipal.resx">
-      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCheckin.resx">
+      <DependentUpon>FrmCheckin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRecuperarSenha.resx">
-      <DependentUpon>frmRecuperarSenha.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCheckOut.resx">
+      <DependentUpon>FrmCheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRecuperarSenha.resx">
+      <DependentUpon>FrmRecuperarSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistrarCheckIn.resx">
+      <DependentUpon>FrmRegistrarCheckIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistrarCheckOut.resx">
+      <DependentUpon>FrmRegistrarCheckOut.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

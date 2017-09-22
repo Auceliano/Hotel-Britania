@@ -1,6 +1,6 @@
 ﻿namespace Hotel_Britania
 {
-    partial class frmPrincipal
+    partial class FrmPrincipal
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -50,8 +50,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastroToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.funcionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unidadesHabitacionaisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.entradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,9 +65,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.cadastroToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.funcionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -270,17 +270,46 @@
             this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(83, 20);
             this.cadastroToolStripMenuItem.Text = "&Gerenciador";
             // 
+            // cadastroToolStripMenuItem1
+            // 
+            this.cadastroToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("cadastroToolStripMenuItem1.Image")));
+            this.cadastroToolStripMenuItem1.Name = "cadastroToolStripMenuItem1";
+            this.cadastroToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
+            this.cadastroToolStripMenuItem1.Size = new System.Drawing.Size(240, 22);
+            this.cadastroToolStripMenuItem1.Text = "&Hóspedes ";
+            this.cadastroToolStripMenuItem1.Click += new System.EventHandler(this.cadastroToolStripMenuItem1_Click);
+            // 
+            // funcionáriosToolStripMenuItem
+            // 
+            this.funcionáriosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("funcionáriosToolStripMenuItem.Image")));
+            this.funcionáriosToolStripMenuItem.Name = "funcionáriosToolStripMenuItem";
+            this.funcionáriosToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
+            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
+            this.funcionáriosToolStripMenuItem.Text = "&Funcionários";
+            this.funcionáriosToolStripMenuItem.Click += new System.EventHandler(this.funcionáriosToolStripMenuItem_Click);
+            // 
             // unidadesHabitacionaisToolStripMenuItem
             // 
+            this.unidadesHabitacionaisToolStripMenuItem.Image = global::Hotel_Britania.Properties.Resources._1378621665_aiga_hotel_information;
             this.unidadesHabitacionaisToolStripMenuItem.Name = "unidadesHabitacionaisToolStripMenuItem";
             this.unidadesHabitacionaisToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
             this.unidadesHabitacionaisToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
             this.unidadesHabitacionaisToolStripMenuItem.Text = "&Unidades Habitacionais";
+            this.unidadesHabitacionaisToolStripMenuItem.Click += new System.EventHandler(this.unidadesHabitacionaisToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(237, 6);
+            // 
+            // sairToolStripMenuItem
+            // 
+            this.sairToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sairToolStripMenuItem.Image")));
+            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            this.sairToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
+            this.sairToolStripMenuItem.Text = "&Sair";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // checkToolStripMenuItem
             // 
@@ -293,17 +322,21 @@
             // 
             // entradaToolStripMenuItem
             // 
+            this.entradaToolStripMenuItem.Image = global::Hotel_Britania.Properties.Resources._1383278118_linked_in;
             this.entradaToolStripMenuItem.Name = "entradaToolStripMenuItem";
             this.entradaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
             this.entradaToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.entradaToolStripMenuItem.Text = "Check-&In";
+            this.entradaToolStripMenuItem.Click += new System.EventHandler(this.entradaToolStripMenuItem_Click);
             // 
             // saidaToolStripMenuItem
             // 
+            this.saidaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("saidaToolStripMenuItem.Image")));
             this.saidaToolStripMenuItem.Name = "saidaToolStripMenuItem";
             this.saidaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
             this.saidaToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.saidaToolStripMenuItem.Text = "Check-&Out";
+            this.saidaToolStripMenuItem.Click += new System.EventHandler(this.saidaToolStripMenuItem_Click);
             // 
             // trocarUsuarioToolStripMenuItem
             // 
@@ -328,6 +361,7 @@
             this.logoffToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
             this.logoffToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.logoffToolStripMenuItem.Text = "&Redefinir Senha";
+            this.logoffToolStripMenuItem.Click += new System.EventHandler(this.logoffToolStripMenuItem_Click);
             // 
             // groupBox1
             // 
@@ -379,33 +413,7 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Obrigado por utilizar nossos serviços.";
             // 
-            // cadastroToolStripMenuItem1
-            // 
-            this.cadastroToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("cadastroToolStripMenuItem1.Image")));
-            this.cadastroToolStripMenuItem1.Name = "cadastroToolStripMenuItem1";
-            this.cadastroToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
-            this.cadastroToolStripMenuItem1.Size = new System.Drawing.Size(240, 22);
-            this.cadastroToolStripMenuItem1.Text = "&Hóspedes ";
-            this.cadastroToolStripMenuItem1.Click += new System.EventHandler(this.cadastroToolStripMenuItem1_Click);
-            // 
-            // funcionáriosToolStripMenuItem
-            // 
-            this.funcionáriosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("funcionáriosToolStripMenuItem.Image")));
-            this.funcionáriosToolStripMenuItem.Name = "funcionáriosToolStripMenuItem";
-            this.funcionáriosToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
-            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
-            this.funcionáriosToolStripMenuItem.Text = "&Funcionários";
-            this.funcionáriosToolStripMenuItem.Click += new System.EventHandler(this.funcionáriosToolStripMenuItem_Click);
-            // 
-            // sairToolStripMenuItem
-            // 
-            this.sairToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sairToolStripMenuItem.Image")));
-            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
-            this.sairToolStripMenuItem.Text = "&Sair";
-            // 
-            // frmPrincipal
+            // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -419,10 +427,11 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "frmPrincipal";
+            this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hotel Britania";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);

@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace Hotel_Britania
 {
-    public partial class FrmRecuperarSenha : Form
+    public partial class FrmCheckOut : Form
     {
-        public FrmRecuperarSenha()
+        public FrmCheckOut()
         {
             InitializeComponent();
+        }
+
+        private void btnInserir_Click(object sender, EventArgs e)
+        {
+            FrmRegistrarCheckOut registrarCheckOut = new FrmRegistrarCheckOut();
+            registrarCheckOut.ShowDialog();
         }
     }
 }

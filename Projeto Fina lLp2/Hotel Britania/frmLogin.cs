@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Hotel_Britania
 {
-    public partial class frmLogin : Form
+    public partial class FrmLogin : Form
     {
-        public frmLogin()
+        public FrmLogin()
         {
             InitializeComponent();
         }
@@ -23,9 +23,9 @@ namespace Hotel_Britania
             {
                 if (true)
                 {
-                    frmPrincipal form = new frmPrincipal();
-                    this.Visible = false;
-                    form.ShowDialog();
+                    //frmPrincipal form = new frmPrincipal();
+                    this.Close();
+                    //form.ShowDialog();
                 }
                 else
                 {
@@ -36,6 +36,12 @@ namespace Hotel_Britania
             {
                 MessageBox.Show("Verifique Usuario e Senha.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+
+        private void lblEsqueceu_Click(object sender, EventArgs e)
+        {
+            FrmRecuperarSenha recuperarSenha = new FrmRecuperarSenha();
+            recuperarSenha.ShowDialog();
         }
     }
 }

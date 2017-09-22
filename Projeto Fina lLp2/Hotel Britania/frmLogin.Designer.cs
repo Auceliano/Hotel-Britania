@@ -1,6 +1,6 @@
 ﻿namespace Hotel_Britania
 {
-    partial class frmLogin
+    partial class FrmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.btnEntrar = new System.Windows.Forms.Button();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
@@ -86,6 +86,7 @@
             this.lblEsqueceu.Size = new System.Drawing.Size(113, 13);
             this.lblEsqueceu.TabIndex = 11;
             this.lblEsqueceu.Text = "Esqueceu sua senha?";
+            this.lblEsqueceu.Click += new System.EventHandler(this.lblEsqueceu_Click);
             // 
             // lblSenha
             // 

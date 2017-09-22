@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Hotel_Britania
 {
-    public partial class FrmRecuperarSenha : Form
+    public partial class FrmCadastrarHospede : Form
     {
-        public FrmRecuperarSenha()
+        public FrmCadastrarHospede()
         {
             InitializeComponent();
         }
