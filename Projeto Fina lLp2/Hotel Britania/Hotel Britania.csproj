@@ -45,52 +45,97 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmCadastrarFuncionario.cs">
+    <Compile Include="UI\FrmCadastrarFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadastrarFuncionario.Designer.cs">
-      <DependentUpon>frmCadastrarFuncionario.cs</DependentUpon>
+    <Compile Include="UI\FrmCadastrarFuncionario.Designer.cs">
+      <DependentUpon>FrmCadastrarFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCadastrasHospede.cs">
+    <Compile Include="UI\FrmCadastrarHospede.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadastrasHospede.Designer.cs">
-      <DependentUpon>frmCadastrasHospede.cs</DependentUpon>
+    <Compile Include="UI\FrmCadastrarHospede.Designer.cs">
+      <DependentUpon>FrmCadastrarHospede.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.cs">
+    <Compile Include="UI\FrmCadastrarUnidadeHabitacional.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.cs">
-      <DependentUpon>frmLogin.cs</DependentUpon>
+    <Compile Include="UI\FrmCadastrarUnidadeHabitacional.Designer.cs">
+      <DependentUpon>FrmCadastrarUnidadeHabitacional.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPrincipal.cs">
+    <Compile Include="UI\FrmCheckin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPrincipal.Designer.cs">
-      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    <Compile Include="UI\FrmCheckin.Designer.cs">
+      <DependentUpon>FrmCheckin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRecuperarSenha.cs">
+    <Compile Include="UI\FrmCheckOut.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRecuperarSenha.Designer.cs">
-      <DependentUpon>frmRecuperarSenha.cs</DependentUpon>
+    <Compile Include="UI\FrmCheckOut.Designer.cs">
+      <DependentUpon>FrmCheckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmRecuperarSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmRecuperarSenha.Designer.cs">
+      <DependentUpon>FrmRecuperarSenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmRegistrarCheckIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmRegistrarCheckIn.Designer.cs">
+      <DependentUpon>FrmRegistrarCheckIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmRegistrarCheckOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmRegistrarCheckOut.Designer.cs">
+      <DependentUpon>FrmRegistrarCheckOut.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmCadastrarFuncionario.resx">
-      <DependentUpon>frmCadastrarFuncionario.cs</DependentUpon>
+    <EmbeddedResource Include="UI\FrmCadastrarFuncionario.resx">
+      <DependentUpon>FrmCadastrarFuncionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCadastrasHospede.resx">
-      <DependentUpon>frmCadastrasHospede.cs</DependentUpon>
+    <EmbeddedResource Include="UI\FrmCadastrarHospede.resx">
+      <DependentUpon>FrmCadastrarHospede.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
-      <DependentUpon>frmLogin.cs</DependentUpon>
+    <EmbeddedResource Include="UI\FrmCadastrarUnidadeHabitacional.resx">
+      <DependentUpon>FrmCadastrarUnidadeHabitacional.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPrincipal.resx">
-      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    <EmbeddedResource Include="UI\FrmCheckin.resx">
+      <DependentUpon>FrmCheckin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRecuperarSenha.resx">
-      <DependentUpon>frmRecuperarSenha.cs</DependentUpon>
+    <EmbeddedResource Include="UI\FrmCheckOut.resx">
+      <DependentUpon>FrmCheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmRecuperarSenha.resx">
+      <DependentUpon>FrmRecuperarSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmRegistrarCheckIn.resx">
+      <DependentUpon>FrmRegistrarCheckIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmRegistrarCheckOut.resx">
+      <DependentUpon>FrmRegistrarCheckOut.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -141,6 +186,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BLL\" />
+    <Folder Include="DAL\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
