@@ -45,6 +45,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\CheckBll.cs" />
+    <Compile Include="BLL\FuncionarioBll.cs" />
+    <Compile Include="BLL\HospedeBll.cs" />
+    <Compile Include="BLL\UnidadeHabitacionalBll.cs" />
     <Compile Include="UI\FrmCadastrarFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,7 +192,6 @@
     <None Include="Resources\Key.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BLL\" />
     <Folder Include="DAL\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
