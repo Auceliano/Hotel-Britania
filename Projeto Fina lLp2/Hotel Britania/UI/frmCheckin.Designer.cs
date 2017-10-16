@@ -231,7 +231,7 @@
             this.Controls.Add(this.lblNovoHospede);
             this.Controls.Add(this.pcbFuncionario);
             this.Controls.Add(this.gpbPesquisa);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;

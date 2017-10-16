@@ -112,7 +112,7 @@
             this.pcbKey.TabIndex = 18;
             this.pcbKey.TabStop = false;
             // 
-            // frmRecuperarSenha
+            // FrmRecuperarSenha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -125,10 +125,11 @@
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.pcbKey);
             this.Controls.Add(this.lblBemVindo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmRecuperarSenha";
+            this.Name = "FrmRecuperarSenha";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Recuperar Senha";
             ((System.ComponentModel.ISupportInitialize)(this.pcbKey)).EndInit();
