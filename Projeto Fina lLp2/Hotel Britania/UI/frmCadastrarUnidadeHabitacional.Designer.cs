@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadastrarUnidadeHabitacional));
-            this.txtNumeroUni = new System.Windows.Forms.TextBox();
+            this.txtNumero = new System.Windows.Forms.TextBox();
             this.lblNumeroUni = new System.Windows.Forms.Label();
             this.gpbPesquisa = new System.Windows.Forms.GroupBox();
             this.btnBuscaAvancada = new System.Windows.Forms.Button();
@@ -48,9 +49,9 @@
             this.ckbClimatizador = new System.Windows.Forms.CheckBox();
             this.ckbWireless = new System.Windows.Forms.CheckBox();
             this.ckbSuiteSingle = new System.Windows.Forms.CheckBox();
-            this.ckbSuiteMarried = new System.Windows.Forms.CheckBox();
+            this.ckbSuiteMaried = new System.Windows.Forms.CheckBox();
             this.lblNovaUnidade = new System.Windows.Forms.Label();
-            this.txtNomeUni = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNomeUni = new System.Windows.Forms.Label();
             this.gpbRegistros = new System.Windows.Forms.GroupBox();
             this.btnSalvar = new System.Windows.Forms.Button();
@@ -60,21 +61,37 @@
             this.pcbUnidade = new System.Windows.Forms.PictureBox();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.hotelBDDataSet = new Hotel_Britania.HotelBDDataSet();
+            this.tbUnidadeHabitacionalBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tbUnidadeHabitacionalTableAdapter = new Hotel_Britania.HotelBDDataSetTableAdapters.tbUnidadeHabitacionalTableAdapter();
+            this.uniIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uniNomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uniNumeroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uniValorDiariaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uniDescricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uniSuiteMariedDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.uniSuiteSingleDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.uniDuasCamasDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.uniClimatizadorDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.uniFrigobarDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.uniWirelessDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.gpbPesquisa.SuspendLayout();
             this.gpbCaracteristiacas.SuspendLayout();
             this.gpbRegistros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbUnidade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelBDDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbUnidadeHabitacionalBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtNumeroUni
+            // txtNumero
             // 
-            this.txtNumeroUni.Enabled = false;
-            this.txtNumeroUni.Location = new System.Drawing.Point(198, 22);
-            this.txtNumeroUni.MaxLength = 6;
-            this.txtNumeroUni.Name = "txtNumeroUni";
-            this.txtNumeroUni.Size = new System.Drawing.Size(56, 20);
-            this.txtNumeroUni.TabIndex = 1;
+            this.txtNumero.Enabled = false;
+            this.txtNumero.Location = new System.Drawing.Point(198, 22);
+            this.txtNumero.MaxLength = 6;
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(56, 20);
+            this.txtNumero.TabIndex = 1;
             // 
             // lblNumeroUni
             // 
@@ -204,7 +221,7 @@
             this.gpbCaracteristiacas.Controls.Add(this.ckbClimatizador);
             this.gpbCaracteristiacas.Controls.Add(this.ckbWireless);
             this.gpbCaracteristiacas.Controls.Add(this.ckbSuiteSingle);
-            this.gpbCaracteristiacas.Controls.Add(this.ckbSuiteMarried);
+            this.gpbCaracteristiacas.Controls.Add(this.ckbSuiteMaried);
             this.gpbCaracteristiacas.Location = new System.Drawing.Point(268, 23);
             this.gpbCaracteristiacas.Name = "gpbCaracteristiacas";
             this.gpbCaracteristiacas.Size = new System.Drawing.Size(220, 89);
@@ -267,16 +284,16 @@
             this.ckbSuiteSingle.Text = "Suite Single";
             this.ckbSuiteSingle.UseVisualStyleBackColor = true;
             // 
-            // ckbSuiteMarried
+            // ckbSuiteMaried
             // 
-            this.ckbSuiteMarried.AutoSize = true;
-            this.ckbSuiteMarried.Enabled = false;
-            this.ckbSuiteMarried.Location = new System.Drawing.Point(15, 19);
-            this.ckbSuiteMarried.Name = "ckbSuiteMarried";
-            this.ckbSuiteMarried.Size = new System.Drawing.Size(88, 17);
-            this.ckbSuiteMarried.TabIndex = 0;
-            this.ckbSuiteMarried.Text = "Suite Married";
-            this.ckbSuiteMarried.UseVisualStyleBackColor = true;
+            this.ckbSuiteMaried.AutoSize = true;
+            this.ckbSuiteMaried.Enabled = false;
+            this.ckbSuiteMaried.Location = new System.Drawing.Point(15, 19);
+            this.ckbSuiteMaried.Name = "ckbSuiteMaried";
+            this.ckbSuiteMaried.Size = new System.Drawing.Size(88, 17);
+            this.ckbSuiteMaried.TabIndex = 0;
+            this.ckbSuiteMaried.Text = "Suite Married";
+            this.ckbSuiteMaried.UseVisualStyleBackColor = true;
             // 
             // lblNovaUnidade
             // 
@@ -287,14 +304,14 @@
             this.lblNovaUnidade.TabIndex = 32;
             this.lblNovaUnidade.Text = "Nova Unidade.";
             // 
-            // txtNomeUni
+            // txtNome
             // 
-            this.txtNomeUni.Enabled = false;
-            this.txtNomeUni.Location = new System.Drawing.Point(48, 22);
-            this.txtNomeUni.MaxLength = 50;
-            this.txtNomeUni.Name = "txtNomeUni";
-            this.txtNomeUni.Size = new System.Drawing.Size(100, 20);
-            this.txtNomeUni.TabIndex = 0;
+            this.txtNome.Enabled = false;
+            this.txtNome.Location = new System.Drawing.Point(48, 22);
+            this.txtNome.MaxLength = 50;
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(100, 20);
+            this.txtNome.TabIndex = 0;
             // 
             // lblNomeUni
             // 
@@ -315,9 +332,9 @@
             this.gpbRegistros.Controls.Add(this.txtDescricao);
             this.gpbRegistros.Controls.Add(this.lblDescricao);
             this.gpbRegistros.Controls.Add(this.gpbCaracteristiacas);
-            this.gpbRegistros.Controls.Add(this.txtNumeroUni);
+            this.gpbRegistros.Controls.Add(this.txtNumero);
             this.gpbRegistros.Controls.Add(this.lblNumeroUni);
-            this.gpbRegistros.Controls.Add(this.txtNomeUni);
+            this.gpbRegistros.Controls.Add(this.txtNome);
             this.gpbRegistros.Controls.Add(this.lblNomeUni);
             this.gpbRegistros.Location = new System.Drawing.Point(-1, 84);
             this.gpbRegistros.Name = "gpbRegistros";
@@ -338,6 +355,7 @@
             this.btnSalvar.Text = "Sal&var";
             this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnIncluir
             // 
@@ -350,6 +368,7 @@
             this.btnIncluir.Text = "&Incluir";
             this.btnIncluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnIncluir.UseVisualStyleBackColor = true;
+            this.btnIncluir.Click += new System.EventHandler(this.btnIncluir_Click);
             // 
             // btnExcluir
             // 
@@ -363,6 +382,7 @@
             this.btnExcluir.Text = "&Excluir";
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnCancelar
             // 
@@ -376,6 +396,7 @@
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // pcbUnidade
             // 
@@ -400,14 +421,125 @@
             this.btnAlterar.Text = "&Alterar";
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.uniIdDataGridViewTextBoxColumn,
+            this.uniNomeDataGridViewTextBoxColumn,
+            this.uniNumeroDataGridViewTextBoxColumn,
+            this.uniValorDiariaDataGridViewTextBoxColumn,
+            this.uniDescricaoDataGridViewTextBoxColumn,
+            this.uniSuiteMariedDataGridViewCheckBoxColumn,
+            this.uniSuiteSingleDataGridViewCheckBoxColumn,
+            this.uniDuasCamasDataGridViewCheckBoxColumn,
+            this.uniClimatizadorDataGridViewCheckBoxColumn,
+            this.uniFrigobarDataGridViewCheckBoxColumn,
+            this.uniWirelessDataGridViewCheckBoxColumn});
+            this.dataGridView1.DataSource = this.tbUnidadeHabitacionalBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 287);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(475, 262);
             this.dataGridView1.TabIndex = 41;
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
+            this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
+            // 
+            // hotelBDDataSet
+            // 
+            this.hotelBDDataSet.DataSetName = "HotelBDDataSet";
+            this.hotelBDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tbUnidadeHabitacionalBindingSource
+            // 
+            this.tbUnidadeHabitacionalBindingSource.DataMember = "tbUnidadeHabitacional";
+            this.tbUnidadeHabitacionalBindingSource.DataSource = this.hotelBDDataSet;
+            // 
+            // tbUnidadeHabitacionalTableAdapter
+            // 
+            this.tbUnidadeHabitacionalTableAdapter.ClearBeforeFill = true;
+            // 
+            // uniIdDataGridViewTextBoxColumn
+            // 
+            this.uniIdDataGridViewTextBoxColumn.DataPropertyName = "Uni_Id";
+            this.uniIdDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.uniIdDataGridViewTextBoxColumn.Name = "uniIdDataGridViewTextBoxColumn";
+            this.uniIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // uniNomeDataGridViewTextBoxColumn
+            // 
+            this.uniNomeDataGridViewTextBoxColumn.DataPropertyName = "Uni_Nome";
+            this.uniNomeDataGridViewTextBoxColumn.HeaderText = "Nome";
+            this.uniNomeDataGridViewTextBoxColumn.Name = "uniNomeDataGridViewTextBoxColumn";
+            this.uniNomeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // uniNumeroDataGridViewTextBoxColumn
+            // 
+            this.uniNumeroDataGridViewTextBoxColumn.DataPropertyName = "Uni_Numero";
+            this.uniNumeroDataGridViewTextBoxColumn.HeaderText = "Número";
+            this.uniNumeroDataGridViewTextBoxColumn.Name = "uniNumeroDataGridViewTextBoxColumn";
+            this.uniNumeroDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // uniValorDiariaDataGridViewTextBoxColumn
+            // 
+            this.uniValorDiariaDataGridViewTextBoxColumn.DataPropertyName = "Uni_ValorDiaria";
+            this.uniValorDiariaDataGridViewTextBoxColumn.HeaderText = "Valor da diaria";
+            this.uniValorDiariaDataGridViewTextBoxColumn.Name = "uniValorDiariaDataGridViewTextBoxColumn";
+            this.uniValorDiariaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // uniDescricaoDataGridViewTextBoxColumn
+            // 
+            this.uniDescricaoDataGridViewTextBoxColumn.DataPropertyName = "Uni_Descricao";
+            this.uniDescricaoDataGridViewTextBoxColumn.HeaderText = "Descrição";
+            this.uniDescricaoDataGridViewTextBoxColumn.Name = "uniDescricaoDataGridViewTextBoxColumn";
+            this.uniDescricaoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // uniSuiteMariedDataGridViewCheckBoxColumn
+            // 
+            this.uniSuiteMariedDataGridViewCheckBoxColumn.DataPropertyName = "Uni_SuiteMaried";
+            this.uniSuiteMariedDataGridViewCheckBoxColumn.HeaderText = "Suite Maried";
+            this.uniSuiteMariedDataGridViewCheckBoxColumn.Name = "uniSuiteMariedDataGridViewCheckBoxColumn";
+            this.uniSuiteMariedDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
+            // uniSuiteSingleDataGridViewCheckBoxColumn
+            // 
+            this.uniSuiteSingleDataGridViewCheckBoxColumn.DataPropertyName = "Uni_SuiteSingle";
+            this.uniSuiteSingleDataGridViewCheckBoxColumn.HeaderText = "Suite Single";
+            this.uniSuiteSingleDataGridViewCheckBoxColumn.Name = "uniSuiteSingleDataGridViewCheckBoxColumn";
+            this.uniSuiteSingleDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
+            // uniDuasCamasDataGridViewCheckBoxColumn
+            // 
+            this.uniDuasCamasDataGridViewCheckBoxColumn.DataPropertyName = "Uni_DuasCamas";
+            this.uniDuasCamasDataGridViewCheckBoxColumn.HeaderText = "Duas Camas";
+            this.uniDuasCamasDataGridViewCheckBoxColumn.Name = "uniDuasCamasDataGridViewCheckBoxColumn";
+            this.uniDuasCamasDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
+            // uniClimatizadorDataGridViewCheckBoxColumn
+            // 
+            this.uniClimatizadorDataGridViewCheckBoxColumn.DataPropertyName = "Uni_Climatizador";
+            this.uniClimatizadorDataGridViewCheckBoxColumn.HeaderText = "Climatizador";
+            this.uniClimatizadorDataGridViewCheckBoxColumn.Name = "uniClimatizadorDataGridViewCheckBoxColumn";
+            this.uniClimatizadorDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
+            // uniFrigobarDataGridViewCheckBoxColumn
+            // 
+            this.uniFrigobarDataGridViewCheckBoxColumn.DataPropertyName = "Uni_Frigobar";
+            this.uniFrigobarDataGridViewCheckBoxColumn.HeaderText = "Frigobar";
+            this.uniFrigobarDataGridViewCheckBoxColumn.Name = "uniFrigobarDataGridViewCheckBoxColumn";
+            this.uniFrigobarDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
+            // uniWirelessDataGridViewCheckBoxColumn
+            // 
+            this.uniWirelessDataGridViewCheckBoxColumn.DataPropertyName = "Uni_Wireless";
+            this.uniWirelessDataGridViewCheckBoxColumn.HeaderText = "Wireless";
+            this.uniWirelessDataGridViewCheckBoxColumn.Name = "uniWirelessDataGridViewCheckBoxColumn";
+            this.uniWirelessDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
             // FrmCadastrarUnidadeHabitacional
             // 
@@ -430,6 +562,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmCadastrarUnidadeHabitacional";
             this.Text = "Cadastrar Unidades Habitacionais";
+            this.Load += new System.EventHandler(this.FrmCadastrarUnidadeHabitacional_Load);
             this.gpbPesquisa.ResumeLayout(false);
             this.gpbPesquisa.PerformLayout();
             this.gpbCaracteristiacas.ResumeLayout(false);
@@ -438,6 +571,8 @@
             this.gpbRegistros.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbUnidade)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelBDDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbUnidadeHabitacionalBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -448,7 +583,7 @@
         protected System.Windows.Forms.Button btnSalvar;
         protected System.Windows.Forms.Button btnBuscaAvancada;
         protected System.Windows.Forms.Button btnBuscaRapida;
-        private System.Windows.Forms.TextBox txtNumeroUni;
+        private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.Label lblNumeroUni;
         protected System.Windows.Forms.Button btnAnterior;
         protected System.Windows.Forms.Button btnIncluir;
@@ -468,13 +603,27 @@
         private System.Windows.Forms.CheckBox ckbClimatizador;
         private System.Windows.Forms.CheckBox ckbWireless;
         private System.Windows.Forms.CheckBox ckbSuiteSingle;
-        private System.Windows.Forms.CheckBox ckbSuiteMarried;
+        private System.Windows.Forms.CheckBox ckbSuiteMaried;
         private System.Windows.Forms.Label lblNovaUnidade;
         private System.Windows.Forms.PictureBox pcbUnidade;
-        private System.Windows.Forms.TextBox txtNomeUni;
+        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblNomeUni;
         protected System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.GroupBox gpbRegistros;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private HotelBDDataSet hotelBDDataSet;
+        private System.Windows.Forms.BindingSource tbUnidadeHabitacionalBindingSource;
+        private HotelBDDataSetTableAdapters.tbUnidadeHabitacionalTableAdapter tbUnidadeHabitacionalTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn uniIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn uniNomeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn uniNumeroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn uniValorDiariaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn uniDescricaoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn uniSuiteMariedDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn uniSuiteSingleDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn uniDuasCamasDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn uniClimatizadorDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn uniFrigobarDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn uniWirelessDataGridViewCheckBoxColumn;
     }
 }

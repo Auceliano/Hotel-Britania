@@ -67,6 +67,7 @@
     <Compile Include="BLL\UnidadeHabitacionalBll.cs" />
     <Compile Include="DAL\FuncionarioDal.cs" />
     <Compile Include="DAL\HospedeDal.cs" />
+    <Compile Include="DAL\UnidadeHabitacionalDal.cs" />
     <Compile Include="HotelBDDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
