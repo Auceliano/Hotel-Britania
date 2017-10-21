@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadastrarHospede));
             this.btnIncluir = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
@@ -65,10 +66,25 @@
             this.btnAlterar = new System.Windows.Forms.Button();
             this.gpbRegistros = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.hosIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hosNomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hosNaturalidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hosUfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hosNacionalidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hosCpfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hosSexoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hosDataNascimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hosTelefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hosEMailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tbHospedeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hotelBDDataSet = new Hotel_Britania.HotelBDDataSet();
+            this.tbHospedeTableAdapter = new Hotel_Britania.HotelBDDataSetTableAdapters.tbHospedeTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pcbHospede)).BeginInit();
             this.gpbPesquisa.SuspendLayout();
             this.gpbRegistros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbHospedeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelBDDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // btnIncluir
@@ -82,6 +98,7 @@
             this.btnIncluir.Text = "&Incluir";
             this.btnIncluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnIncluir.UseVisualStyleBackColor = true;
+            this.btnIncluir.Click += new System.EventHandler(this.btnIncluir_Click);
             // 
             // label11
             // 
@@ -241,6 +258,7 @@
             this.btnSalvar.Text = "Sal&var";
             this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // mktCPF
             // 
@@ -332,6 +350,7 @@
             this.btnExcluir.Text = "&Excluir";
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnCancelar
             // 
@@ -345,6 +364,7 @@
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // lblDataNascimento
             // 
@@ -446,6 +466,7 @@
             this.btnAlterar.Text = "&Alterar";
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // gpbRegistros
             // 
@@ -481,13 +502,116 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.hosIdDataGridViewTextBoxColumn,
+            this.hosNomeDataGridViewTextBoxColumn,
+            this.hosNaturalidadeDataGridViewTextBoxColumn,
+            this.hosUfDataGridViewTextBoxColumn,
+            this.hosNacionalidadeDataGridViewTextBoxColumn,
+            this.hosCpfDataGridViewTextBoxColumn,
+            this.hosSexoDataGridViewTextBoxColumn,
+            this.hosDataNascimentoDataGridViewTextBoxColumn,
+            this.hosTelefoneDataGridViewTextBoxColumn,
+            this.hosEMailDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.tbHospedeBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 297);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(474, 232);
             this.dataGridView1.TabIndex = 25;
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
+            this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
             // 
-            // frmCadastrarHospede
+            // hosIdDataGridViewTextBoxColumn
+            // 
+            this.hosIdDataGridViewTextBoxColumn.DataPropertyName = "Hos_Id";
+            this.hosIdDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.hosIdDataGridViewTextBoxColumn.Name = "hosIdDataGridViewTextBoxColumn";
+            this.hosIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hosNomeDataGridViewTextBoxColumn
+            // 
+            this.hosNomeDataGridViewTextBoxColumn.DataPropertyName = "Hos_Nome";
+            this.hosNomeDataGridViewTextBoxColumn.HeaderText = "Nome";
+            this.hosNomeDataGridViewTextBoxColumn.Name = "hosNomeDataGridViewTextBoxColumn";
+            this.hosNomeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hosNaturalidadeDataGridViewTextBoxColumn
+            // 
+            this.hosNaturalidadeDataGridViewTextBoxColumn.DataPropertyName = "Hos_Naturalidade";
+            this.hosNaturalidadeDataGridViewTextBoxColumn.HeaderText = "Naturalidade";
+            this.hosNaturalidadeDataGridViewTextBoxColumn.Name = "hosNaturalidadeDataGridViewTextBoxColumn";
+            this.hosNaturalidadeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hosUfDataGridViewTextBoxColumn
+            // 
+            this.hosUfDataGridViewTextBoxColumn.DataPropertyName = "Hos_Uf";
+            this.hosUfDataGridViewTextBoxColumn.HeaderText = "UF";
+            this.hosUfDataGridViewTextBoxColumn.Name = "hosUfDataGridViewTextBoxColumn";
+            this.hosUfDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hosNacionalidadeDataGridViewTextBoxColumn
+            // 
+            this.hosNacionalidadeDataGridViewTextBoxColumn.DataPropertyName = "Hos_Nacionalidade";
+            this.hosNacionalidadeDataGridViewTextBoxColumn.HeaderText = "Nacionalidade";
+            this.hosNacionalidadeDataGridViewTextBoxColumn.Name = "hosNacionalidadeDataGridViewTextBoxColumn";
+            this.hosNacionalidadeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hosCpfDataGridViewTextBoxColumn
+            // 
+            this.hosCpfDataGridViewTextBoxColumn.DataPropertyName = "Hos_Cpf";
+            this.hosCpfDataGridViewTextBoxColumn.HeaderText = "Cpf";
+            this.hosCpfDataGridViewTextBoxColumn.Name = "hosCpfDataGridViewTextBoxColumn";
+            this.hosCpfDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hosSexoDataGridViewTextBoxColumn
+            // 
+            this.hosSexoDataGridViewTextBoxColumn.DataPropertyName = "Hos_Sexo";
+            this.hosSexoDataGridViewTextBoxColumn.HeaderText = "Sexo";
+            this.hosSexoDataGridViewTextBoxColumn.Name = "hosSexoDataGridViewTextBoxColumn";
+            this.hosSexoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hosDataNascimentoDataGridViewTextBoxColumn
+            // 
+            this.hosDataNascimentoDataGridViewTextBoxColumn.DataPropertyName = "Hos_DataNascimento";
+            this.hosDataNascimentoDataGridViewTextBoxColumn.HeaderText = "Data Nascimento";
+            this.hosDataNascimentoDataGridViewTextBoxColumn.Name = "hosDataNascimentoDataGridViewTextBoxColumn";
+            this.hosDataNascimentoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hosTelefoneDataGridViewTextBoxColumn
+            // 
+            this.hosTelefoneDataGridViewTextBoxColumn.DataPropertyName = "Hos_Telefone";
+            this.hosTelefoneDataGridViewTextBoxColumn.HeaderText = "Telefone";
+            this.hosTelefoneDataGridViewTextBoxColumn.Name = "hosTelefoneDataGridViewTextBoxColumn";
+            this.hosTelefoneDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hosEMailDataGridViewTextBoxColumn
+            // 
+            this.hosEMailDataGridViewTextBoxColumn.DataPropertyName = "Hos_EMail";
+            this.hosEMailDataGridViewTextBoxColumn.HeaderText = "E-Mail";
+            this.hosEMailDataGridViewTextBoxColumn.Name = "hosEMailDataGridViewTextBoxColumn";
+            this.hosEMailDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tbHospedeBindingSource
+            // 
+            this.tbHospedeBindingSource.DataMember = "tbHospede";
+            this.tbHospedeBindingSource.DataSource = this.hotelBDDataSet;
+            // 
+            // hotelBDDataSet
+            // 
+            this.hotelBDDataSet.DataSetName = "HotelBDDataSet";
+            this.hotelBDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tbHospedeTableAdapter
+            // 
+            this.tbHospedeTableAdapter.ClearBeforeFill = true;
+            // 
+            // FrmCadastrarHospede
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -506,14 +630,17 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmCadastrarHospede";
+            this.Name = "FrmCadastrarHospede";
             this.Text = "Cadastrar Hóspede";
+            this.Load += new System.EventHandler(this.FrmCadastrarHospede_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pcbHospede)).EndInit();
             this.gpbPesquisa.ResumeLayout(false);
             this.gpbPesquisa.PerformLayout();
             this.gpbRegistros.ResumeLayout(false);
             this.gpbRegistros.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbHospedeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelBDDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -557,5 +684,18 @@
         protected System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.GroupBox gpbRegistros;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private HotelBDDataSet hotelBDDataSet;
+        private System.Windows.Forms.BindingSource tbHospedeBindingSource;
+        private HotelBDDataSetTableAdapters.tbHospedeTableAdapter tbHospedeTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hosIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hosNomeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hosNaturalidadeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hosUfDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hosNacionalidadeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hosCpfDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hosSexoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hosDataNascimentoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hosTelefoneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hosEMailDataGridViewTextBoxColumn;
     }
 }

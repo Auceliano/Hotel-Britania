@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hotel_Britania.BLL
 {
-    class HospedeBll
+    public class HospedeBll
     {
         /// <summary>
         /// Código ID interno do Hospede.

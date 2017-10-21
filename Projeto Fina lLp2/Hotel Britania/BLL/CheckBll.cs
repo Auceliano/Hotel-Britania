@@ -31,7 +31,7 @@ namespace Hotel_Britania.BLL
         /// <summary>
         /// Situação Reserva, CheckIn ou CheckOut.
         /// </summary>
-        public String Status { get; set; }
+        public String StatusCk { get; set; }
 
         /// <summary>
         /// Nome da Unidade Habitacional

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadastrarFuncionario));
             this.lblInformacoesPessoais = new System.Windows.Forms.Label();
             this.lblContatos = new System.Windows.Forms.Label();
@@ -71,7 +72,6 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.gpbRegistros = new System.Windows.Forms.GroupBox();
-            this.ckbAdministrador = new System.Windows.Forms.CheckBox();
             this.pcbKey = new System.Windows.Forms.PictureBox();
             this.btnIncluir = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
@@ -80,11 +80,31 @@
             this.btnAlterar = new System.Windows.Forms.Button();
             this.pcbFuncionario = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.hotelBDDataSet = new Hotel_Britania.HotelBDDataSet();
+            this.tbFuncionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tbFuncionarioTableAdapter = new Hotel_Britania.HotelBDDataSetTableAdapters.tbFuncionarioTableAdapter();
+            this.funIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.funNomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.funNaturalidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.funUfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.funNacionalidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.funCpfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.funSexoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.funDataNascimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.funTelefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.funEMailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.funDataEntradaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.funCargoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.funUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.funSenhaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.funSalarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gpbPesquisa.SuspendLayout();
             this.gpbRegistros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbKey)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbFuncionario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelBDDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbFuncionarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblInformacoesPessoais
@@ -219,7 +239,6 @@
             // lblConfirmar
             // 
             this.lblConfirmar.AutoSize = true;
-            this.lblConfirmar.Enabled = false;
             this.lblConfirmar.Location = new System.Drawing.Point(269, 142);
             this.lblConfirmar.Name = "lblConfirmar";
             this.lblConfirmar.Size = new System.Drawing.Size(54, 13);
@@ -239,7 +258,6 @@
             // lblSenha
             // 
             this.lblSenha.AutoSize = true;
-            this.lblSenha.Enabled = false;
             this.lblSenha.Location = new System.Drawing.Point(269, 112);
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(41, 13);
@@ -258,7 +276,6 @@
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Enabled = false;
             this.lblUsuario.Location = new System.Drawing.Point(269, 82);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(46, 13);
@@ -276,6 +293,7 @@
             this.ckbPermitirLogin.TabIndex = 10;
             this.ckbPermitirLogin.Text = "Permitir Login?";
             this.ckbPermitirLogin.UseVisualStyleBackColor = true;
+            this.ckbPermitirLogin.CheckedChanged += new System.EventHandler(this.ckbPermitirLogin_CheckedChanged_1);
             // 
             // txtCargo
             // 
@@ -520,7 +538,6 @@
             this.gpbRegistros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gpbRegistros.Controls.Add(this.ckbAdministrador);
             this.gpbRegistros.Controls.Add(this.lblInformacoesPessoais);
             this.gpbRegistros.Controls.Add(this.lblContatos);
             this.gpbRegistros.Controls.Add(this.cboUF);
@@ -562,18 +579,6 @@
             this.gpbRegistros.TabStop = false;
             this.gpbRegistros.Text = "Registros";
             // 
-            // ckbAdministrador
-            // 
-            this.ckbAdministrador.AutoSize = true;
-            this.ckbAdministrador.CausesValidation = false;
-            this.ckbAdministrador.Enabled = false;
-            this.ckbAdministrador.Location = new System.Drawing.Point(272, 53);
-            this.ckbAdministrador.Name = "ckbAdministrador";
-            this.ckbAdministrador.Size = new System.Drawing.Size(95, 17);
-            this.ckbAdministrador.TabIndex = 69;
-            this.ckbAdministrador.Text = "Administrador?";
-            this.ckbAdministrador.UseVisualStyleBackColor = true;
-            // 
             // pcbKey
             // 
             this.pcbKey.Image = global::Hotel_Britania.Properties.Resources._key;
@@ -595,6 +600,7 @@
             this.btnIncluir.Text = "&Incluir";
             this.btnIncluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnIncluir.UseVisualStyleBackColor = true;
+            this.btnIncluir.Click += new System.EventHandler(this.btnIncluir_Click);
             // 
             // btnSalvar
             // 
@@ -608,6 +614,7 @@
             this.btnSalvar.Text = "Sal&var";
             this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnExcluir
             // 
@@ -621,6 +628,7 @@
             this.btnExcluir.Text = "&Excluir";
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnCancelar
             // 
@@ -634,6 +642,7 @@
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAlterar
             // 
@@ -647,6 +656,7 @@
             this.btnAlterar.Text = "&Alterar";
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // pcbFuncionario
             // 
@@ -661,11 +671,154 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.funIdDataGridViewTextBoxColumn,
+            this.funNomeDataGridViewTextBoxColumn,
+            this.funNaturalidadeDataGridViewTextBoxColumn,
+            this.funUfDataGridViewTextBoxColumn,
+            this.funNacionalidadeDataGridViewTextBoxColumn,
+            this.funCpfDataGridViewTextBoxColumn,
+            this.funSexoDataGridViewTextBoxColumn,
+            this.funDataNascimentoDataGridViewTextBoxColumn,
+            this.funTelefoneDataGridViewTextBoxColumn,
+            this.funEMailDataGridViewTextBoxColumn,
+            this.funDataEntradaDataGridViewTextBoxColumn,
+            this.funCargoDataGridViewTextBoxColumn,
+            this.funUsuarioDataGridViewTextBoxColumn,
+            this.funSenhaDataGridViewTextBoxColumn,
+            this.funSalarioDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.tbFuncionarioBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 452);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(470, 232);
             this.dataGridView1.TabIndex = 36;
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
+            this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
+            // 
+            // hotelBDDataSet
+            // 
+            this.hotelBDDataSet.DataSetName = "HotelBDDataSet";
+            this.hotelBDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tbFuncionarioBindingSource
+            // 
+            this.tbFuncionarioBindingSource.DataMember = "tbFuncionario";
+            this.tbFuncionarioBindingSource.DataSource = this.hotelBDDataSet;
+            // 
+            // tbFuncionarioTableAdapter
+            // 
+            this.tbFuncionarioTableAdapter.ClearBeforeFill = true;
+            // 
+            // funIdDataGridViewTextBoxColumn
+            // 
+            this.funIdDataGridViewTextBoxColumn.DataPropertyName = "Fun_Id";
+            this.funIdDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.funIdDataGridViewTextBoxColumn.Name = "funIdDataGridViewTextBoxColumn";
+            this.funIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // funNomeDataGridViewTextBoxColumn
+            // 
+            this.funNomeDataGridViewTextBoxColumn.DataPropertyName = "Fun_Nome";
+            this.funNomeDataGridViewTextBoxColumn.HeaderText = "Nome";
+            this.funNomeDataGridViewTextBoxColumn.Name = "funNomeDataGridViewTextBoxColumn";
+            this.funNomeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // funNaturalidadeDataGridViewTextBoxColumn
+            // 
+            this.funNaturalidadeDataGridViewTextBoxColumn.DataPropertyName = "Fun_Naturalidade";
+            this.funNaturalidadeDataGridViewTextBoxColumn.HeaderText = "Naturalidade";
+            this.funNaturalidadeDataGridViewTextBoxColumn.Name = "funNaturalidadeDataGridViewTextBoxColumn";
+            this.funNaturalidadeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // funUfDataGridViewTextBoxColumn
+            // 
+            this.funUfDataGridViewTextBoxColumn.DataPropertyName = "Fun_Uf";
+            this.funUfDataGridViewTextBoxColumn.HeaderText = "UF";
+            this.funUfDataGridViewTextBoxColumn.Name = "funUfDataGridViewTextBoxColumn";
+            this.funUfDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // funNacionalidadeDataGridViewTextBoxColumn
+            // 
+            this.funNacionalidadeDataGridViewTextBoxColumn.DataPropertyName = "Fun_Nacionalidade";
+            this.funNacionalidadeDataGridViewTextBoxColumn.HeaderText = "Nacionalidade";
+            this.funNacionalidadeDataGridViewTextBoxColumn.Name = "funNacionalidadeDataGridViewTextBoxColumn";
+            this.funNacionalidadeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // funCpfDataGridViewTextBoxColumn
+            // 
+            this.funCpfDataGridViewTextBoxColumn.DataPropertyName = "Fun_Cpf";
+            this.funCpfDataGridViewTextBoxColumn.HeaderText = "Cpf";
+            this.funCpfDataGridViewTextBoxColumn.Name = "funCpfDataGridViewTextBoxColumn";
+            this.funCpfDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // funSexoDataGridViewTextBoxColumn
+            // 
+            this.funSexoDataGridViewTextBoxColumn.DataPropertyName = "Fun_Sexo";
+            this.funSexoDataGridViewTextBoxColumn.HeaderText = "Sexo";
+            this.funSexoDataGridViewTextBoxColumn.Name = "funSexoDataGridViewTextBoxColumn";
+            this.funSexoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // funDataNascimentoDataGridViewTextBoxColumn
+            // 
+            this.funDataNascimentoDataGridViewTextBoxColumn.DataPropertyName = "Fun_DataNascimento";
+            this.funDataNascimentoDataGridViewTextBoxColumn.HeaderText = "Data de Nascimento";
+            this.funDataNascimentoDataGridViewTextBoxColumn.Name = "funDataNascimentoDataGridViewTextBoxColumn";
+            this.funDataNascimentoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // funTelefoneDataGridViewTextBoxColumn
+            // 
+            this.funTelefoneDataGridViewTextBoxColumn.DataPropertyName = "Fun_Telefone";
+            this.funTelefoneDataGridViewTextBoxColumn.HeaderText = "Telefone";
+            this.funTelefoneDataGridViewTextBoxColumn.Name = "funTelefoneDataGridViewTextBoxColumn";
+            this.funTelefoneDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // funEMailDataGridViewTextBoxColumn
+            // 
+            this.funEMailDataGridViewTextBoxColumn.DataPropertyName = "Fun_EMail";
+            this.funEMailDataGridViewTextBoxColumn.HeaderText = "EMail";
+            this.funEMailDataGridViewTextBoxColumn.Name = "funEMailDataGridViewTextBoxColumn";
+            this.funEMailDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // funDataEntradaDataGridViewTextBoxColumn
+            // 
+            this.funDataEntradaDataGridViewTextBoxColumn.DataPropertyName = "Fun_DataEntrada";
+            this.funDataEntradaDataGridViewTextBoxColumn.HeaderText = "Data Entrada";
+            this.funDataEntradaDataGridViewTextBoxColumn.Name = "funDataEntradaDataGridViewTextBoxColumn";
+            this.funDataEntradaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // funCargoDataGridViewTextBoxColumn
+            // 
+            this.funCargoDataGridViewTextBoxColumn.DataPropertyName = "Fun_Cargo";
+            this.funCargoDataGridViewTextBoxColumn.HeaderText = "Cargo";
+            this.funCargoDataGridViewTextBoxColumn.Name = "funCargoDataGridViewTextBoxColumn";
+            this.funCargoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // funUsuarioDataGridViewTextBoxColumn
+            // 
+            this.funUsuarioDataGridViewTextBoxColumn.DataPropertyName = "Fun_Usuario";
+            this.funUsuarioDataGridViewTextBoxColumn.HeaderText = "Usuario";
+            this.funUsuarioDataGridViewTextBoxColumn.Name = "funUsuarioDataGridViewTextBoxColumn";
+            this.funUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // funSenhaDataGridViewTextBoxColumn
+            // 
+            this.funSenhaDataGridViewTextBoxColumn.DataPropertyName = "Fun_Senha";
+            this.funSenhaDataGridViewTextBoxColumn.HeaderText = "Senha";
+            this.funSenhaDataGridViewTextBoxColumn.Name = "funSenhaDataGridViewTextBoxColumn";
+            this.funSenhaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // funSalarioDataGridViewTextBoxColumn
+            // 
+            this.funSalarioDataGridViewTextBoxColumn.DataPropertyName = "Fun_Salario";
+            this.funSalarioDataGridViewTextBoxColumn.HeaderText = "Salario";
+            this.funSalarioDataGridViewTextBoxColumn.Name = "funSalarioDataGridViewTextBoxColumn";
+            this.funSalarioDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // FrmCadastrarFuncionario
             // 
@@ -688,6 +841,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmCadastrarFuncionario";
             this.Text = " Cadastrar Funcionários";
+            this.Load += new System.EventHandler(this.FrmCadastrarFuncionario_Load);
             this.gpbPesquisa.ResumeLayout(false);
             this.gpbPesquisa.PerformLayout();
             this.gpbRegistros.ResumeLayout(false);
@@ -695,6 +849,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbKey)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbFuncionario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelBDDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbFuncionarioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -752,7 +908,24 @@
         private System.Windows.Forms.PictureBox pcbFuncionario;
         private System.Windows.Forms.GroupBox gpbRegistros;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.CheckBox ckbAdministrador;
+        private HotelBDDataSet hotelBDDataSet;
+        private System.Windows.Forms.BindingSource tbFuncionarioBindingSource;
+        private HotelBDDataSetTableAdapters.tbFuncionarioTableAdapter tbFuncionarioTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn funIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn funNomeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn funNaturalidadeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn funUfDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn funNacionalidadeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn funCpfDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn funSexoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn funDataNascimentoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn funTelefoneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn funEMailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn funDataEntradaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn funCargoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn funUsuarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn funSenhaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn funSalarioDataGridViewTextBoxColumn;
     }
 }
 
