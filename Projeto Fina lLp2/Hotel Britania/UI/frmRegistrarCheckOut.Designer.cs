@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistrarCheckOut));
             this.gpbCheck = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtDespesas = new System.Windows.Forms.TextBox();
+            this.txtCpfHos = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblHospedes = new System.Windows.Forms.Label();
+            this.txtNomeHospede = new System.Windows.Forms.TextBox();
+            this.lblHospede = new System.Windows.Forms.Label();
             this.dtpDataCheckOut = new System.Windows.Forms.DateTimePicker();
             this.lblDataCheckOut = new System.Windows.Forms.Label();
             this.lblNUni = new System.Windows.Forms.Label();
-            this.dataDispesas = new System.Windows.Forms.DataGridView();
             this.txtNUni = new System.Windows.Forms.TextBox();
             this.lblDespesas = new System.Windows.Forms.Label();
             this.txtNomeUni = new System.Windows.Forms.TextBox();
@@ -53,21 +53,20 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnRemover = new System.Windows.Forms.Button();
             this.gpbCheck.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataDispesas)).BeginInit();
             this.gpbBuscaCheckIn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataBusCheck)).BeginInit();
             this.SuspendLayout();
             // 
             // gpbCheck
             // 
-            this.gpbCheck.Controls.Add(this.textBox2);
+            this.gpbCheck.Controls.Add(this.txtDespesas);
+            this.gpbCheck.Controls.Add(this.txtCpfHos);
             this.gpbCheck.Controls.Add(this.label1);
-            this.gpbCheck.Controls.Add(this.textBox1);
-            this.gpbCheck.Controls.Add(this.lblHospedes);
+            this.gpbCheck.Controls.Add(this.txtNomeHospede);
+            this.gpbCheck.Controls.Add(this.lblHospede);
             this.gpbCheck.Controls.Add(this.dtpDataCheckOut);
             this.gpbCheck.Controls.Add(this.lblDataCheckOut);
             this.gpbCheck.Controls.Add(this.lblNUni);
-            this.gpbCheck.Controls.Add(this.dataDispesas);
             this.gpbCheck.Controls.Add(this.txtNUni);
             this.gpbCheck.Controls.Add(this.lblDespesas);
             this.gpbCheck.Controls.Add(this.txtNomeUni);
@@ -79,41 +78,49 @@
             this.gpbCheck.TabStop = false;
             this.gpbCheck.Text = "Check";
             // 
-            // textBox2
+            // txtDespesas
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(44, 158);
-            this.textBox2.MaxLength = 6;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(221, 20);
-            this.textBox2.TabIndex = 26;
+            this.txtDespesas.Enabled = false;
+            this.txtDespesas.Location = new System.Drawing.Point(6, 258);
+            this.txtDespesas.Name = "txtDespesas";
+            this.txtDespesas.Size = new System.Drawing.Size(259, 20);
+            this.txtDespesas.TabIndex = 27;
+            // 
+            // txtCpfHos
+            // 
+            this.txtCpfHos.Enabled = false;
+            this.txtCpfHos.Location = new System.Drawing.Point(44, 185);
+            this.txtCpfHos.MaxLength = 6;
+            this.txtCpfHos.Name = "txtCpfHos";
+            this.txtCpfHos.Size = new System.Drawing.Size(221, 20);
+            this.txtCpfHos.TabIndex = 26;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 161);
+            this.label1.Location = new System.Drawing.Point(8, 188);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(30, 13);
             this.label1.TabIndex = 25;
             this.label1.Text = "CPF:";
             // 
-            // textBox1
+            // txtNomeHospede
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(11, 132);
-            this.textBox1.MaxLength = 6;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(254, 20);
-            this.textBox1.TabIndex = 24;
+            this.txtNomeHospede.Enabled = false;
+            this.txtNomeHospede.Location = new System.Drawing.Point(11, 159);
+            this.txtNomeHospede.MaxLength = 6;
+            this.txtNomeHospede.Name = "txtNomeHospede";
+            this.txtNomeHospede.Size = new System.Drawing.Size(254, 20);
+            this.txtNomeHospede.TabIndex = 24;
             // 
-            // lblHospedes
+            // lblHospede
             // 
-            this.lblHospedes.AutoSize = true;
-            this.lblHospedes.Location = new System.Drawing.Point(9, 116);
-            this.lblHospedes.Name = "lblHospedes";
-            this.lblHospedes.Size = new System.Drawing.Size(58, 13);
-            this.lblHospedes.TabIndex = 23;
-            this.lblHospedes.Text = "Hóspedes:";
+            this.lblHospede.AutoSize = true;
+            this.lblHospede.Location = new System.Drawing.Point(9, 143);
+            this.lblHospede.Name = "lblHospede";
+            this.lblHospede.Size = new System.Drawing.Size(53, 13);
+            this.lblHospede.TabIndex = 23;
+            this.lblHospede.Text = "Hóspede:";
             // 
             // dtpDataCheckOut
             // 
@@ -123,7 +130,7 @@
             this.dtpDataCheckOut.Name = "dtpDataCheckOut";
             this.dtpDataCheckOut.Size = new System.Drawing.Size(253, 20);
             this.dtpDataCheckOut.TabIndex = 2;
-            this.dtpDataCheckOut.Value = new System.DateTime(2013, 11, 2, 0, 0, 0, 0);
+            this.dtpDataCheckOut.Value = new System.DateTime(2017, 10, 22, 0, 0, 0, 0);
             // 
             // lblDataCheckOut
             // 
@@ -143,14 +150,6 @@
             this.lblNUni.TabIndex = 20;
             this.lblNUni.Text = "Nº. da Unidade:";
             // 
-            // dataDispesas
-            // 
-            this.dataDispesas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataDispesas.Location = new System.Drawing.Point(11, 202);
-            this.dataDispesas.Name = "dataDispesas";
-            this.dataDispesas.Size = new System.Drawing.Size(254, 79);
-            this.dataDispesas.TabIndex = 3;
-            // 
             // txtNUni
             // 
             this.txtNUni.Enabled = false;
@@ -162,7 +161,7 @@
             // lblDespesas
             // 
             this.lblDespesas.AutoSize = true;
-            this.lblDespesas.Location = new System.Drawing.Point(9, 186);
+            this.lblDespesas.Location = new System.Drawing.Point(9, 242);
             this.lblDespesas.Name = "lblDespesas";
             this.lblDespesas.Size = new System.Drawing.Size(57, 13);
             this.lblDespesas.TabIndex = 10;
@@ -259,6 +258,7 @@
             this.btnSalvar.TabIndex = 40;
             this.btnSalvar.Text = "&Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnCancelar
             // 
@@ -297,7 +297,6 @@
             this.Text = "Registrar Check-Out";
             this.gpbCheck.ResumeLayout(false);
             this.gpbCheck.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataDispesas)).EndInit();
             this.gpbBuscaCheckIn.ResumeLayout(false);
             this.gpbBuscaCheckIn.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataBusCheck)).EndInit();
@@ -307,11 +306,10 @@
 
         #endregion
         private System.Windows.Forms.GroupBox gpbCheck;
-        private System.Windows.Forms.Label lblHospedes;
+        private System.Windows.Forms.Label lblHospede;
         private System.Windows.Forms.DateTimePicker dtpDataCheckOut;
         private System.Windows.Forms.Label lblDataCheckOut;
         private System.Windows.Forms.Label lblNUni;
-        private System.Windows.Forms.DataGridView dataDispesas;
         private System.Windows.Forms.TextBox txtNUni;
         private System.Windows.Forms.Label lblDespesas;
         private System.Windows.Forms.TextBox txtNomeUni;
@@ -325,9 +323,10 @@
         private System.Windows.Forms.DataGridView dataBusCheck;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtCpfHos;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNomeHospede;
         private System.Windows.Forms.Button btnRemover;
+        private System.Windows.Forms.TextBox txtDespesas;
     }
 }

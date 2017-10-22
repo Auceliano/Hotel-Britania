@@ -19,30 +19,17 @@ namespace Hotel_Britania
             InitializeComponent();
         }
 
-        private void HabilitarCampos()
+        private void HabilitarCampos(bool status)
         {
-            txtNome.Enabled = true;
-            mktCPF.Enabled = true;
-            dtpDataNascimento.Enabled = true;
-            txtNaturalidade.Enabled = true;
-            txtNacionalidade.Enabled = true;
-            cboSexo.Enabled = true;
-            cboUF.Enabled = true;
-            mktTelefone.Enabled = true;
-            txtEmail.Enabled = true;
-        }
-
-        private void DesabilitarCampos()
-        {
-            txtNome.Enabled = false;
-            mktCPF.Enabled = false;
-            dtpDataNascimento.Enabled = false;
-            txtNaturalidade.Enabled = false;
-            txtNacionalidade.Enabled = false;
-            cboSexo.Enabled = false;
-            cboUF.Enabled = false;
-            mktTelefone.Enabled = false;
-            txtEmail.Enabled = false;
+            txtNome.Enabled = status;
+            mktCPF.Enabled = status;
+            dtpDataNascimento.Enabled = status;
+            txtNaturalidade.Enabled = status;
+            txtNacionalidade.Enabled = status;
+            cboSexo.Enabled = status;
+            cboUF.Enabled = status;
+            mktTelefone.Enabled = status;
+            txtEmail.Enabled = status;
         }
 
         //Metodo que Limpa todos os campos
@@ -61,7 +48,7 @@ namespace Hotel_Britania
 
         private void btnIncluir_Click(object sender, EventArgs e)
         {
-            HabilitarCampos();
+            HabilitarCampos(true);
             btnIncluir.Enabled = false;
             btnSalvar.Enabled = true;
             btnAlterar.Enabled = false;
@@ -72,7 +59,7 @@ namespace Hotel_Britania
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             LimparCampos();
-            DesabilitarCampos();
+            HabilitarCampos(false);
 
             dataGridView1.Enabled = true;
 
@@ -211,7 +198,7 @@ namespace Hotel_Britania
                 MessageBox.Show("Os dados foram salvos com sucesso!", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 LimparCampos();
-                DesabilitarCampos();
+                HabilitarCampos(false);
                 btnIncluir.Enabled = true;
                 btnSalvar.Enabled = false;
                 btnAlterar.Enabled = false;
@@ -229,7 +216,7 @@ namespace Hotel_Britania
 
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            DesabilitarCampos();
+            HabilitarCampos(false);
 
             txtNome.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             txtNaturalidade.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
@@ -272,7 +259,7 @@ namespace Hotel_Britania
                 MessageBox.Show("Os dados foram salvos com sucesso!", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 LimparCampos();
-                DesabilitarCampos();
+                HabilitarCampos(false);
                 dataGridView1.Enabled = true;
                 btnIncluir.Enabled = true;
                 btnSalvar.Enabled = false;
@@ -284,7 +271,7 @@ namespace Hotel_Britania
 
         private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            HabilitarCampos();
+            HabilitarCampos(true);
 
             dataGridView1.Enabled = false;
 
@@ -297,26 +284,25 @@ namespace Hotel_Britania
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            HospedeDal dados = new HospedeDal();
-            HospedeBll entidade = new HospedeBll();
+            if (MessageBox.Show("Você tem certeza que quer apagar os dados do Hóspede?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+            {
+                HospedeDal dados = new HospedeDal();
+                dados.Exclui(Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value));
 
-            entidade.CodigoHos = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+                MessageBox.Show("Os dados foram excuido com sucesso!", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            dados.Exclui(entidade.CodigoHos);
+                LimparCampos();
 
-            MessageBox.Show("Os dados foram excuido com sucesso!", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                HabilitarCampos(false);
 
-            LimparCampos();
+                dataGridView1.Enabled = true;
 
-            DesabilitarCampos();
-
-            dataGridView1.Enabled = true;
-
-            btnAlterar.Enabled = false;
-            btnIncluir.Enabled = true;
-            btnSalvar.Enabled = false;
-            btnExcluir.Enabled = false;
-            btnCancelar.Enabled = false;
+                btnAlterar.Enabled = false;
+                btnIncluir.Enabled = true;
+                btnSalvar.Enabled = false;
+                btnExcluir.Enabled = false;
+                btnCancelar.Enabled = false;
+            }
         }
     }
 }

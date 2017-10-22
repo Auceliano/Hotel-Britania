@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCheckin));
             this.lblNovoHospede = new System.Windows.Forms.Label();
             this.pcbFuncionario = new System.Windows.Forms.PictureBox();
@@ -44,10 +45,21 @@
             this.btnAlterar = new System.Windows.Forms.Button();
             this.gpbRegistrosCheckIn = new System.Windows.Forms.GroupBox();
             this.dataCheckIn = new System.Windows.Forms.DataGridView();
+            this.ckIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ckStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ckDataCheckInDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ckDataCheckOutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fkHospedeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fkUnidadeHabitacionalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tbCheckBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hotelBDDataSet = new Hotel_Britania.HotelBDDataSet();
+            this.tbCheckTableAdapter = new Hotel_Britania.HotelBDDataSetTableAdapters.tbCheckTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pcbFuncionario)).BeginInit();
             this.gpbPesquisa.SuspendLayout();
             this.gpbRegistrosCheckIn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataCheckIn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbCheckBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelBDDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNovoHospede
@@ -158,6 +170,7 @@
             this.btnExcluir.TabIndex = 41;
             this.btnExcluir.Text = "&Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnInserir
             // 
@@ -175,12 +188,14 @@
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelar.Enabled = false;
             this.btnCancelar.Location = new System.Drawing.Point(576, 317);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 42;
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAlterar
             // 
@@ -193,6 +208,7 @@
             this.btnAlterar.TabIndex = 40;
             this.btnAlterar.Text = "&Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // gpbRegistrosCheckIn
             // 
@@ -209,14 +225,81 @@
             // 
             // dataCheckIn
             // 
-            this.dataCheckIn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataCheckIn.AllowUserToAddRows = false;
+            this.dataCheckIn.AllowUserToDeleteRows = false;
+            this.dataCheckIn.AllowUserToOrderColumns = true;
+            this.dataCheckIn.AutoGenerateColumns = false;
             this.dataCheckIn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataCheckIn.Location = new System.Drawing.Point(13, 19);
+            this.dataCheckIn.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ckIdDataGridViewTextBoxColumn,
+            this.ckStatusDataGridViewTextBoxColumn,
+            this.ckDataCheckInDataGridViewTextBoxColumn,
+            this.ckDataCheckOutDataGridViewTextBoxColumn,
+            this.fkHospedeDataGridViewTextBoxColumn,
+            this.fkUnidadeHabitacionalDataGridViewTextBoxColumn});
+            this.dataCheckIn.DataSource = this.tbCheckBindingSource;
+            this.dataCheckIn.Location = new System.Drawing.Point(6, 19);
             this.dataCheckIn.Name = "dataCheckIn";
-            this.dataCheckIn.Size = new System.Drawing.Size(639, 209);
+            this.dataCheckIn.ReadOnly = true;
+            this.dataCheckIn.Size = new System.Drawing.Size(652, 215);
             this.dataCheckIn.TabIndex = 0;
+            this.dataCheckIn.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataCheckIn_CellMouseClick_1);
+            // 
+            // ckIdDataGridViewTextBoxColumn
+            // 
+            this.ckIdDataGridViewTextBoxColumn.DataPropertyName = "Ck_Id";
+            this.ckIdDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.ckIdDataGridViewTextBoxColumn.Name = "ckIdDataGridViewTextBoxColumn";
+            this.ckIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ckStatusDataGridViewTextBoxColumn
+            // 
+            this.ckStatusDataGridViewTextBoxColumn.DataPropertyName = "Ck_Status";
+            this.ckStatusDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.ckStatusDataGridViewTextBoxColumn.Name = "ckStatusDataGridViewTextBoxColumn";
+            this.ckStatusDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ckDataCheckInDataGridViewTextBoxColumn
+            // 
+            this.ckDataCheckInDataGridViewTextBoxColumn.DataPropertyName = "Ck_DataCheckIn";
+            this.ckDataCheckInDataGridViewTextBoxColumn.HeaderText = "Data Check-In";
+            this.ckDataCheckInDataGridViewTextBoxColumn.Name = "ckDataCheckInDataGridViewTextBoxColumn";
+            this.ckDataCheckInDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ckDataCheckOutDataGridViewTextBoxColumn
+            // 
+            this.ckDataCheckOutDataGridViewTextBoxColumn.DataPropertyName = "Ck_DataCheckOut";
+            this.ckDataCheckOutDataGridViewTextBoxColumn.HeaderText = "Data Check-Out";
+            this.ckDataCheckOutDataGridViewTextBoxColumn.Name = "ckDataCheckOutDataGridViewTextBoxColumn";
+            this.ckDataCheckOutDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fkHospedeDataGridViewTextBoxColumn
+            // 
+            this.fkHospedeDataGridViewTextBoxColumn.DataPropertyName = "Fk_Hospede";
+            this.fkHospedeDataGridViewTextBoxColumn.HeaderText = "Fk Hospede";
+            this.fkHospedeDataGridViewTextBoxColumn.Name = "fkHospedeDataGridViewTextBoxColumn";
+            this.fkHospedeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fkUnidadeHabitacionalDataGridViewTextBoxColumn
+            // 
+            this.fkUnidadeHabitacionalDataGridViewTextBoxColumn.DataPropertyName = "Fk_UnidadeHabitacional";
+            this.fkUnidadeHabitacionalDataGridViewTextBoxColumn.HeaderText = "Fk Unidade Habitacional";
+            this.fkUnidadeHabitacionalDataGridViewTextBoxColumn.Name = "fkUnidadeHabitacionalDataGridViewTextBoxColumn";
+            this.fkUnidadeHabitacionalDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tbCheckBindingSource
+            // 
+            this.tbCheckBindingSource.DataMember = "tbCheck";
+            this.tbCheckBindingSource.DataSource = this.hotelBDDataSet;
+            // 
+            // hotelBDDataSet
+            // 
+            this.hotelBDDataSet.DataSetName = "HotelBDDataSet";
+            this.hotelBDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tbCheckTableAdapter
+            // 
+            this.tbCheckTableAdapter.ClearBeforeFill = true;
             // 
             // FrmCheckin
             // 
@@ -236,12 +319,14 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmCheckin";
-            this.Text = "Registros de Reservas e Check-In";
+            this.Load += new System.EventHandler(this.FrmCheckin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pcbFuncionario)).EndInit();
             this.gpbPesquisa.ResumeLayout(false);
             this.gpbPesquisa.PerformLayout();
             this.gpbRegistrosCheckIn.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataCheckIn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbCheckBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelBDDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,5 +349,14 @@
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.GroupBox gpbRegistrosCheckIn;
         private System.Windows.Forms.DataGridView dataCheckIn;
+        private HotelBDDataSet hotelBDDataSet;
+        private System.Windows.Forms.BindingSource tbCheckBindingSource;
+        private HotelBDDataSetTableAdapters.tbCheckTableAdapter tbCheckTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ckIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ckStatusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ckDataCheckInDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ckDataCheckOutDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fkHospedeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fkUnidadeHabitacionalDataGridViewTextBoxColumn;
     }
 }

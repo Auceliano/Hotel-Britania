@@ -235,53 +235,24 @@ namespace Hotel_Britania
         }
 
         //Método que Habilita os Campos
-        private void HabilitarCampos()
+        private void HabilitarCampos(bool status)
         {
-            ckbPermitirLogin.Enabled = true;
+            ckbPermitirLogin.Enabled = status;
             
-            txtNome.Enabled = true;
-            txtCargo.Enabled = true;
+            txtNome.Enabled = status;
+            txtCargo.Enabled = status;
 
 
-            txtSalario.Enabled = true;
-            dtpDataEntrada.Enabled = true;
-            txtNaturalidade.Enabled = true;
-            cboUF.Enabled = true;
-            txtNacionalidade.Enabled = true;
-            mktCPF.Enabled = true;
-            cboSexo.Enabled = true;
-            dtpDataNascimento.Enabled = true;
-            txtEmail.Enabled = true;
-            mktTelefone.Enabled = true;
-        }
-
-        
-
-    //Método que Desabilita os campos
-    private void desabilitarCampos()
-        {
-           
-           
-
-            txtUsuario.Enabled = false;
-            txtSenha.Enabled = false;
-            txtConfirmar.Enabled = false;
-
-            ckbPermitirLogin.Checked = false;
-            ckbPermitirLogin.Enabled = false;
-            txtNome.Enabled = false;
-            txtCargo.Enabled = false;
-            txtSalario.Enabled = false;
-            dtpDataEntrada.Enabled = false;
-            txtNaturalidade.Enabled = false;
-            cboUF.Enabled = false;
-            txtNacionalidade.Enabled = false;
-            mktCPF.Enabled = false;
-            cboSexo.Enabled = false;
-            dtpDataNascimento.Enabled = false;
-            txtEmail.Enabled = false;
-            mktTelefone.Enabled = false;
-
+            txtSalario.Enabled = status;
+            dtpDataEntrada.Enabled = status;
+            txtNaturalidade.Enabled = status;
+            cboUF.Enabled = status;
+            txtNacionalidade.Enabled = status;
+            mktCPF.Enabled = status;
+            cboSexo.Enabled = status;
+            dtpDataNascimento.Enabled = status;
+            txtEmail.Enabled = status;
+            mktTelefone.Enabled = status;
         }
 
         //Método corrige as Labels
@@ -307,7 +278,7 @@ namespace Hotel_Britania
 
         private void btnIncluir_Click(object sender, EventArgs e)
         {
-            HabilitarCampos();
+            HabilitarCampos(true);
             btnSalvar.Enabled = true;
             btnCancelar.Enabled = true;
             btnAlterar.Enabled = false;
@@ -319,7 +290,7 @@ namespace Hotel_Britania
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             corrigeLabels();
-            desabilitarCampos();
+            HabilitarCampos(false);
             limparCampos();
             btnSalvar.Enabled = false;
             btnAlterar.Enabled = false;
@@ -358,7 +329,7 @@ namespace Hotel_Britania
                 MessageBox.Show("Os dados foram salvos com sucesso!", "Ok", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 limparCampos();
-                desabilitarCampos();
+                HabilitarCampos(false);
                 btnIncluir.Enabled = true;
                 btnSalvar.Enabled = false;
                 btnAlterar.Enabled = false;
@@ -381,7 +352,7 @@ namespace Hotel_Britania
             {
                 FuncionarioDal dados = new FuncionarioDal();
                 dados.Exclui(Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value));
-                desabilitarCampos();
+                HabilitarCampos(false);
                 limparCampos();
                 btnIncluir.Enabled = true;
                 btnSalvar.Enabled = false;
@@ -434,7 +405,7 @@ namespace Hotel_Britania
                     MessageBox.Show("Os dados foram salvos com sucesso!", "Ok", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     limparCampos();
-                    desabilitarCampos();
+                    HabilitarCampos(false);
                     btnIncluir.Enabled = true;
                     btnSalvar.Enabled = false;
                     btnAlterar.Enabled = false;
@@ -447,7 +418,7 @@ namespace Hotel_Britania
 
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            desabilitarCampos();
+            HabilitarCampos(false);
 
             btnIncluir.Enabled = false;
             btnSalvar.Enabled = false;
@@ -474,7 +445,7 @@ namespace Hotel_Britania
 
         private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            HabilitarCampos();
+            HabilitarCampos(true);
 
             if(dataGridView1.CurrentRow.Cells[12].Value.ToString() != null)
                 ckbPermitirLogin.Checked = true;

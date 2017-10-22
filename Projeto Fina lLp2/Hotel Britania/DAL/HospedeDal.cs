@@ -129,6 +129,54 @@ namespace Hotel_Britania.DAL
             conexao.Close();
         }
 
+        //Pesquisa Rápida
+        public HospedeBll Obter(int id)
+        {
+            //1 - Criar uma conexão com BD
+            SqlConnection conexao = new SqlConnection();
+
+            //2 - Configurara a conexão
+            conexao.ConnectionString = ConfigurationManager.ConnectionStrings["conexaoBD"].ConnectionString;
+
+            //3 - Criar um comando
+            SqlCommand comando = conexao.CreateCommand();
+
+            //4 - Especificar o tipo de comando
+            comando.CommandType = System.Data.CommandType.Text;
+
+            //5 - Especificar o comando
+            comando.CommandText = "select * from tbHospede where HOS_ID = @HOS_ID ";
+            comando.Parameters.AddWithValue("@HOS_ID", id);
+
+
+            //6 - Abrir  a conexão
+            conexao.Open();
+
+            //7 - Executar o comando
+            SqlDataReader reader = comando.ExecuteReader();
+            HospedeBll hospede = null;
+            while (reader.Read())
+            {
+                hospede = new HospedeBll();
+                //Leitura de cada coluna
+                hospede.CodigoHos = Convert.ToInt32(reader["HOS_ID"].ToString());
+                hospede.NomeHos = reader["HOS_NOME"].ToString();
+                hospede.NaturalidadeHos = reader["HOS_NATURALIDADE"].ToString();
+                hospede.UFHos = reader["HOS_UF"].ToString();
+                hospede.NacionalidadeHos = reader["HOS_NACIONALIDADE"].ToString();
+                hospede.CPFHos = reader["HOS_CPF"].ToString();
+                hospede.SexoHos = reader["HOS_SEXO"].ToString();
+                hospede.DataNascHos = Convert.ToDateTime(reader["HOS_DATANASCIMENTO"].ToString());
+                hospede.DDDTelefoneHos = reader["HOS_TELEFONE"].ToString();
+                hospede.EMail = reader["HOS_EMAIL"].ToString();
+            }
+
+            //8 - Fexar a conexão
+            conexao.Close();
+
+            return hospede;
+        }
+
     }
     
 }
