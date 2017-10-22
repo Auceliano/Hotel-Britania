@@ -1,0 +1,20 @@
+C:\Users\ROGERIO\Hotel-Britania\Projeto Fina lLp2\Hotel Britania\bin\Debug\HotelBD.mdf
+C:\Users\ROGERIO\Hotel-Britania\Projeto Fina lLp2\Hotel Britania\bin\Debug\HotelBD_log.ldf
+C:\Users\ROGERIO\Hotel-Britania\Projeto Fina lLp2\Hotel Britania\bin\Debug\Hotel Britania.exe.config
+C:\Users\ROGERIO\Hotel-Britania\Projeto Fina lLp2\Hotel Britania\bin\Debug\Hotel Britania.exe
+C:\Users\ROGERIO\Hotel-Britania\Projeto Fina lLp2\Hotel Britania\bin\Debug\Hotel Britania.pdb
+C:\Users\ROGERIO\Hotel-Britania\Projeto Fina lLp2\Hotel Britania\obj\Debug\Hotel Britania.csprojResolveAssemblyReference.cache
+C:\Users\ROGERIO\Hotel-Britania\Projeto Fina lLp2\Hotel Britania\obj\Debug\Hotel_Britania.FrmCadastrarFuncionario.resources
+C:\Users\ROGERIO\Hotel-Britania\Projeto Fina lLp2\Hotel Britania\obj\Debug\Hotel_Britania.FrmCadastrarHospede.resources
+C:\Users\ROGERIO\Hotel-Britania\Projeto Fina lLp2\Hotel Britania\obj\Debug\Hotel_Britania.FrmCadastrarUnidadeHabitacional.resources
+C:\Users\ROGERIO\Hotel-Britania\Projeto Fina lLp2\Hotel Britania\obj\Debug\Hotel_Britania.FrmCheckin.resources
+C:\Users\ROGERIO\Hotel-Britania\Projeto Fina lLp2\Hotel Britania\obj\Debug\Hotel_Britania.FrmCheckOut.resources
+C:\Users\ROGERIO\Hotel-Britania\Projeto Fina lLp2\Hotel Britania\obj\Debug\Hotel_Britania.FrmLogin.resources
+C:\Users\ROGERIO\Hotel-Britania\Projeto Fina lLp2\Hotel Britania\obj\Debug\Hotel_Britania.FrmPrincipal.resources
+C:\Users\ROGERIO\Hotel-Britania\Projeto Fina lLp2\Hotel Britania\obj\Debug\Hotel_Britania.FrmRecuperarSenha.resources
+C:\Users\ROGERIO\Hotel-Britania\Projeto Fina lLp2\Hotel Britania\obj\Debug\Hotel_Britania.FrmRegistrarCheckIn.resources
+C:\Users\ROGERIO\Hotel-Britania\Projeto Fina lLp2\Hotel Britania\obj\Debug\Hotel_Britania.FrmRegistrarCheckOut.resources
+C:\Users\ROGERIO\Hotel-Britania\Projeto Fina lLp2\Hotel Britania\obj\Debug\Hotel_Britania.Properties.Resources.resources
+C:\Users\ROGERIO\Hotel-Britania\Projeto Fina lLp2\Hotel Britania\obj\Debug\Hotel Britania.csproj.GenerateResource.Cache
+C:\Users\ROGERIO\Hotel-Britania\Projeto Fina lLp2\Hotel Britania\obj\Debug\Hotel Britania.exe
+C:\Users\ROGERIO\Hotel-Britania\Projeto Fina lLp2\Hotel Britania\obj\Debug\Hotel Britania.pdb
