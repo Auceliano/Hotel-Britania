@@ -117,23 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="tbUnidadeHabitacionalBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>531, 17</value>
+  </metadata>
+  <metadata name="hotelBDDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="tbHospedeBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>155, 17</value>
+  </metadata>
+  <metadata name="tbHospedeTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>346, 17</value>
+  </metadata>
+  <metadata name="tbUnidadeHabitacionalTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>55</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pcbHospede.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAmVJREFUWEe1lz9o1GAYxlP/VapYcGgXQZFz0IPzLnfHcYNwCO4WOQR3hzqIgzh1
-        FXEQ3Vw6KTi06iTiUCqioIVi91IojuIi1g5aJD6f5Mp3r7/ky0kcfiR58r3P8+W75E0uSpKkMNVq9XCz
-        2bwWx/FTbdfFi1ardavX6+2j8UVAkajVaocU9kahCbAsbmpil6Mo2kP1WaBo0RUeVMBrLzCPBfLIAkWL
-        TK+YkBAx+RAoWmS4aAJy0U/1jHwIFH3S5d+yIQE2yItA0afRaLQgIMQWeREo+nQ6nWMQEMStHPlZUPRx
-        j5UMd2xAgK/kRaBokeGmCQixQj4Eij71ev2EDH+ZgBBfyItA0afdblchIIja9gHys6DoI7MJ8cM3L8Aq
-        eREoWtRYHkNIHrPkQ6Bo6Xa7R2X6zoRk8aro8jtQJPSmm4Ewy081ruNUnwWKRNoPPppAyzzV5oFiFlqF
-        cxA6YEdPzEmqywPFLPr9/l4FfTfBf9CNukQ1IVDMQiE9Ck95L/ZTXR4o+sh0UsGXtJ0X3wSFD3At+57G
-        X6hUKuPkZ0HRobv5jMwWxKgvogHb4oG+JafIf8Bfgl6/R9LGM2r/z8LdM3N6isZslmPoQOHTGrzmFZeG
-        nqBH9Pk+dKCBK7awTDSJu36eY3dHJ2tUVDKf7Srs7ujkdTP4v+AuFCegEzeooGzULes4AZ0c9c/Hv/DJ
-        vVlxAukfzw+moEzeapVP++GOoQP3HtfAi+K5GPUryOLqV9VTbuu78pSf44OiQ8WT6oZnNevz2u+LWTEn
-        w/uuUUl/qWN3VW77RDwUd3R8Vdu42EdJEv0G8n/XWhQQ2QQAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAYAAAAAAAEAIAAoIAQAZgAAABAQAAABACAAaAQAAI4gBAAwMAAAAQAgAKglAAD2JAQAICAAAAEA

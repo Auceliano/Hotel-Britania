@@ -63,13 +63,6 @@ namespace Hotel_Britania
             reserva.Show();
         }
 
-        private void saidaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmCheckOut checkOut = new FrmCheckOut();
-            checkOut.Show();
-            
-        }
-
         private void logoffToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmRecuperarSenha recuperarSenha = new FrmRecuperarSenha();

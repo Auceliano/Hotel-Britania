@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hotel_Britania.BLL
 {
-    class CheckBll
+    public class CheckBll
     {
         /// <summary>
         /// Código ID Interno.
@@ -51,7 +51,7 @@ namespace Hotel_Britania.BLL
         /// <summary>
         /// Valor da diária
         /// </summary>
-        public long ValorDiaria { get; set; }
+        public string ValorDiaria { get; set; }
 
         /// <sumary>
         /// Pesquisa Nome Unidade ou Hospede

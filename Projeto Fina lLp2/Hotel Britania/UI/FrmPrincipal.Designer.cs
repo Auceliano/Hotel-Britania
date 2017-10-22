@@ -57,9 +57,7 @@
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.entradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trocarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.trocarUsuarioToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.logoffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -314,8 +312,7 @@
             // checkToolStripMenuItem
             // 
             this.checkToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.entradaToolStripMenuItem,
-            this.saidaToolStripMenuItem});
+            this.entradaToolStripMenuItem});
             this.checkToolStripMenuItem.Name = "checkToolStripMenuItem";
             this.checkToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.checkToolStripMenuItem.Text = "Ch&eck";
@@ -329,31 +326,13 @@
             this.entradaToolStripMenuItem.Text = "Check-&In";
             this.entradaToolStripMenuItem.Click += new System.EventHandler(this.entradaToolStripMenuItem_Click);
             // 
-            // saidaToolStripMenuItem
-            // 
-            this.saidaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("saidaToolStripMenuItem.Image")));
-            this.saidaToolStripMenuItem.Name = "saidaToolStripMenuItem";
-            this.saidaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.saidaToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.saidaToolStripMenuItem.Text = "Check-&Out";
-            this.saidaToolStripMenuItem.Click += new System.EventHandler(this.saidaToolStripMenuItem_Click);
-            // 
             // trocarUsuarioToolStripMenuItem
             // 
             this.trocarUsuarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.trocarUsuarioToolStripMenuItem1,
             this.logoffToolStripMenuItem});
             this.trocarUsuarioToolStripMenuItem.Name = "trocarUsuarioToolStripMenuItem";
             this.trocarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.trocarUsuarioToolStripMenuItem.Text = "&Usuário";
-            // 
-            // trocarUsuarioToolStripMenuItem1
-            // 
-            this.trocarUsuarioToolStripMenuItem1.Name = "trocarUsuarioToolStripMenuItem1";
-            this.trocarUsuarioToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
-            this.trocarUsuarioToolStripMenuItem1.Size = new System.Drawing.Size(197, 22);
-            this.trocarUsuarioToolStripMenuItem1.Text = "&Trocar Usuário";
-            this.trocarUsuarioToolStripMenuItem1.Click += new System.EventHandler(this.trocarUsuarioToolStripMenuItem1_Click);
             // 
             // logoffToolStripMenuItem
             // 
@@ -427,6 +406,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hotel Britania";
@@ -473,9 +453,7 @@
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem checkToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem entradaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem saidaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem trocarUsuarioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem trocarUsuarioToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem logoffToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;

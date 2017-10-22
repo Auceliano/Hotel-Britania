@@ -184,5 +184,55 @@ namespace Hotel_Britania.DAL
             //8 - Fexar a conexão
             conexao.Close();
         }
+
+        //Pesquisa Rápida
+        public UnidadeHabitacionalBll Obter(int id)
+        {
+            //1 - Criar uma conexão com BD
+            SqlConnection conexao = new SqlConnection();
+
+            //2 - Configurara a conexão
+            conexao.ConnectionString = ConfigurationManager.ConnectionStrings["conexaoBD"].ConnectionString;
+
+            //3 - Criar um comando
+            SqlCommand comando = conexao.CreateCommand();
+
+            //4 - Especificar o tipo de comando
+            comando.CommandType = System.Data.CommandType.Text;
+
+            //5 - Especificar o comando
+            comando.CommandText = "select * from tbUnidadeHabitacional where UNI_ID = @UNI_ID ";
+            comando.Parameters.AddWithValue("@UNI_ID", id);
+
+
+            //6 - Abrir  a conexão
+            conexao.Open();
+
+            //7 - Executar o comando
+            SqlDataReader reader = comando.ExecuteReader();
+            UnidadeHabitacionalBll unidade = null;
+            while (reader.Read())
+            {
+                unidade = new UnidadeHabitacionalBll();
+
+                //Leitura de cada coluna
+                unidade.Codigo = id;
+                unidade.NomeUni = reader["UNI_NOME"].ToString();
+                unidade.NumeroUni = reader["UNI_NUMERO"].ToString();
+                unidade.ValorDiariaUni = reader["UNI_VALORDIARIA"].ToString();
+                unidade.DescricaoUni = reader["UNI_DESCRICAO"].ToString();
+                unidade.SuiteMarried = Convert.ToBoolean(reader["UNI_SUITEMARIED"].ToString());
+                unidade.SuiteSingle = Convert.ToBoolean(reader["UNI_SUITESINGLE"].ToString());
+                unidade.DuasCamas = Convert.ToBoolean(reader["UNI_DUASCAMAS"].ToString());
+                unidade.Climatizador = Convert.ToBoolean(reader["UNI_CLIMATIZADOR"].ToString());
+                unidade.Frigobar = Convert.ToBoolean(reader["UNI_FRIGOBAR"].ToString());
+                unidade.Wireless = Convert.ToBoolean(reader["UNI_WIRELESS"].ToString());
+            }
+
+            //8 - Fexar a conexão
+            conexao.Close();
+
+            return unidade;
+        }
     }
 }

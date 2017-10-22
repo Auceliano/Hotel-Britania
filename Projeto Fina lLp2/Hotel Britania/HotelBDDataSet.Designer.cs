@@ -406,8 +406,6 @@ namespace Hotel_Britania {
             
             private global::System.Data.DataColumn columnCk_DataCheckOut;
             
-            private global::System.Data.DataColumn columnCk_ValorDiaria;
-            
             private global::System.Data.DataColumn columnFk_Hospede;
             
             private global::System.Data.DataColumn columnFk_UnidadeHabitacional;
@@ -479,14 +477,6 @@ namespace Hotel_Britania {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Ck_ValorDiariaColumn {
-                get {
-                    return this.columnCk_ValorDiaria;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn Fk_HospedeColumn {
                 get {
                     return this.columnFk_Hospede;
@@ -538,21 +528,20 @@ namespace Hotel_Britania {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tbCheckRow AddtbCheckRow(string Ck_Status, System.DateTime Ck_DataCheckIn, System.DateTime Ck_DataCheckOut, double Ck_ValorDiaria, tbHospedeRow parenttbHospedeRowByFK_tbCheck_tbHospede, tbUnidadeHabitacionalRow parenttbUnidadeHabitacionalRowByFK_tbCheck_tbUnidadeHabitacional) {
+            public tbCheckRow AddtbCheckRow(string Ck_Status, System.DateTime Ck_DataCheckIn, System.DateTime Ck_DataCheckOut, tbHospedeRow parenttbHospedeRowByFK_tbCheck_tbHospede, tbUnidadeHabitacionalRow parenttbUnidadeHabitacionalRowByFK_tbCheck_tbUnidadeHabitacional) {
                 tbCheckRow rowtbCheckRow = ((tbCheckRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Ck_Status,
                         Ck_DataCheckIn,
                         Ck_DataCheckOut,
-                        Ck_ValorDiaria,
                         null,
                         null};
                 if ((parenttbHospedeRowByFK_tbCheck_tbHospede != null)) {
-                    columnValuesArray[5] = parenttbHospedeRowByFK_tbCheck_tbHospede[0];
+                    columnValuesArray[4] = parenttbHospedeRowByFK_tbCheck_tbHospede[0];
                 }
                 if ((parenttbUnidadeHabitacionalRowByFK_tbCheck_tbUnidadeHabitacional != null)) {
-                    columnValuesArray[6] = parenttbUnidadeHabitacionalRowByFK_tbCheck_tbUnidadeHabitacional[0];
+                    columnValuesArray[5] = parenttbUnidadeHabitacionalRowByFK_tbCheck_tbUnidadeHabitacional[0];
                 }
                 rowtbCheckRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtbCheckRow);
@@ -587,7 +576,6 @@ namespace Hotel_Britania {
                 this.columnCk_Status = base.Columns["Ck_Status"];
                 this.columnCk_DataCheckIn = base.Columns["Ck_DataCheckIn"];
                 this.columnCk_DataCheckOut = base.Columns["Ck_DataCheckOut"];
-                this.columnCk_ValorDiaria = base.Columns["Ck_ValorDiaria"];
                 this.columnFk_Hospede = base.Columns["Fk_Hospede"];
                 this.columnFk_UnidadeHabitacional = base.Columns["Fk_UnidadeHabitacional"];
             }
@@ -603,8 +591,6 @@ namespace Hotel_Britania {
                 base.Columns.Add(this.columnCk_DataCheckIn);
                 this.columnCk_DataCheckOut = new global::System.Data.DataColumn("Ck_DataCheckOut", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCk_DataCheckOut);
-                this.columnCk_ValorDiaria = new global::System.Data.DataColumn("Ck_ValorDiaria", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCk_ValorDiaria);
                 this.columnFk_Hospede = new global::System.Data.DataColumn("Fk_Hospede", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFk_Hospede);
                 this.columnFk_UnidadeHabitacional = new global::System.Data.DataColumn("Fk_UnidadeHabitacional", typeof(int), null, global::System.Data.MappingType.Element);
@@ -621,7 +607,6 @@ namespace Hotel_Britania {
                 this.columnCk_Status.MaxLength = 10;
                 this.columnCk_DataCheckIn.AllowDBNull = false;
                 this.columnCk_DataCheckOut.AllowDBNull = false;
-                this.columnCk_ValorDiaria.AllowDBNull = false;
                 this.columnFk_Hospede.AllowDBNull = false;
                 this.columnFk_UnidadeHabitacional.AllowDBNull = false;
             }
@@ -2110,17 +2095,6 @@ namespace Hotel_Britania {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public double Ck_ValorDiaria {
-                get {
-                    return ((double)(this[this.tabletbCheck.Ck_ValorDiariaColumn]));
-                }
-                set {
-                    this[this.tabletbCheck.Ck_ValorDiariaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int Fk_Hospede {
                 get {
                     return ((int)(this[this.tabletbCheck.Fk_HospedeColumn]));
@@ -2926,48 +2900,43 @@ namespace Hotel_Britania.HotelBDDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Ck_Status", "Ck_Status");
             tableMapping.ColumnMappings.Add("Ck_DataCheckIn", "Ck_DataCheckIn");
             tableMapping.ColumnMappings.Add("Ck_DataCheckOut", "Ck_DataCheckOut");
-            tableMapping.ColumnMappings.Add("Ck_ValorDiaria", "Ck_ValorDiaria");
             tableMapping.ColumnMappings.Add("Fk_Hospede", "Fk_Hospede");
             tableMapping.ColumnMappings.Add("Fk_UnidadeHabitacional", "Fk_UnidadeHabitacional");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[tbCheck] WHERE (([Ck_Id] = @Original_Ck_Id) AND ([Ck_Status] = @Original_Ck_Status) AND ([Ck_DataCheckIn] = @Original_Ck_DataCheckIn) AND ([Ck_DataCheckOut] = @Original_Ck_DataCheckOut) AND ([Ck_ValorDiaria] = @Original_Ck_ValorDiaria) AND ([Fk_Hospede] = @Original_Fk_Hospede) AND ([Fk_UnidadeHabitacional] = @Original_Fk_UnidadeHabitacional))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [tbCheck] WHERE (([Ck_Id] = @Original_Ck_Id) AND ([Ck_Status] = @Original_Ck_Status) AND ([Ck_DataCheckIn] = @Original_Ck_DataCheckIn) AND ([Ck_DataCheckOut] = @Original_Ck_DataCheckOut) AND ([Fk_Hospede] = @Original_Fk_Hospede) AND ([Fk_UnidadeHabitacional] = @Original_Fk_UnidadeHabitacional))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ck_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ck_Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ck_Status", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ck_Status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ck_DataCheckIn", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ck_DataCheckIn", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ck_DataCheckOut", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ck_DataCheckOut", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ck_ValorDiaria", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ck_ValorDiaria", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fk_Hospede", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fk_Hospede", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fk_UnidadeHabitacional", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fk_UnidadeHabitacional", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tbCheck] ([Ck_Status], [Ck_DataCheckIn], [Ck_DataCheckOut], [Ck_ValorDiaria], [Fk_Hospede], [Fk_UnidadeHabitacional]) VALUES (@Ck_Status, @Ck_DataCheckIn, @Ck_DataCheckOut, @Ck_ValorDiaria, @Fk_Hospede, @Fk_UnidadeHabitacional);
-SELECT Ck_Id, Ck_Status, Ck_DataCheckIn, Ck_DataCheckOut, Ck_ValorDiaria, Fk_Hospede, Fk_UnidadeHabitacional FROM tbCheck WHERE (Ck_Id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [tbCheck] ([Ck_Status], [Ck_DataCheckIn], [Ck_DataCheckOut], [Fk_Hospede], [Fk_UnidadeHabitacional]) VALUES (@Ck_Status, @Ck_DataCheckIn, @Ck_DataCheckOut, @Fk_Hospede, @Fk_UnidadeHabitacional);
+SELECT Ck_Id, Ck_Status, Ck_DataCheckIn, Ck_DataCheckOut, Fk_Hospede, Fk_UnidadeHabitacional FROM tbCheck WHERE (Ck_Id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ck_Status", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ck_Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ck_DataCheckIn", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ck_DataCheckIn", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ck_DataCheckOut", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ck_DataCheckOut", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ck_ValorDiaria", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ck_ValorDiaria", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fk_Hospede", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fk_Hospede", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fk_UnidadeHabitacional", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fk_UnidadeHabitacional", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tbCheck] SET [Ck_Status] = @Ck_Status, [Ck_DataCheckIn] = @Ck_DataCheckIn, [Ck_DataCheckOut] = @Ck_DataCheckOut, [Ck_ValorDiaria] = @Ck_ValorDiaria, [Fk_Hospede] = @Fk_Hospede, [Fk_UnidadeHabitacional] = @Fk_UnidadeHabitacional WHERE (([Ck_Id] = @Original_Ck_Id) AND ([Ck_Status] = @Original_Ck_Status) AND ([Ck_DataCheckIn] = @Original_Ck_DataCheckIn) AND ([Ck_DataCheckOut] = @Original_Ck_DataCheckOut) AND ([Ck_ValorDiaria] = @Original_Ck_ValorDiaria) AND ([Fk_Hospede] = @Original_Fk_Hospede) AND ([Fk_UnidadeHabitacional] = @Original_Fk_UnidadeHabitacional));
-SELECT Ck_Id, Ck_Status, Ck_DataCheckIn, Ck_DataCheckOut, Ck_ValorDiaria, Fk_Hospede, Fk_UnidadeHabitacional FROM tbCheck WHERE (Ck_Id = @Ck_Id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [tbCheck] SET [Ck_Status] = @Ck_Status, [Ck_DataCheckIn] = @Ck_DataCheckIn, [Ck_DataCheckOut] = @Ck_DataCheckOut, [Fk_Hospede] = @Fk_Hospede, [Fk_UnidadeHabitacional] = @Fk_UnidadeHabitacional WHERE (([Ck_Id] = @Original_Ck_Id) AND ([Ck_Status] = @Original_Ck_Status) AND ([Ck_DataCheckIn] = @Original_Ck_DataCheckIn) AND ([Ck_DataCheckOut] = @Original_Ck_DataCheckOut) AND ([Fk_Hospede] = @Original_Fk_Hospede) AND ([Fk_UnidadeHabitacional] = @Original_Fk_UnidadeHabitacional));
+SELECT Ck_Id, Ck_Status, Ck_DataCheckIn, Ck_DataCheckOut, Fk_Hospede, Fk_UnidadeHabitacional FROM tbCheck WHERE (Ck_Id = @Ck_Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ck_Status", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ck_Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ck_DataCheckIn", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ck_DataCheckIn", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ck_DataCheckOut", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ck_DataCheckOut", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ck_ValorDiaria", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ck_ValorDiaria", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fk_Hospede", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fk_Hospede", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fk_UnidadeHabitacional", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fk_UnidadeHabitacional", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ck_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ck_Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ck_Status", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ck_Status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ck_DataCheckIn", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ck_DataCheckIn", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ck_DataCheckOut", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ck_DataCheckOut", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ck_ValorDiaria", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ck_ValorDiaria", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fk_Hospede", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fk_Hospede", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fk_UnidadeHabitacional", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fk_UnidadeHabitacional", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ck_Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Ck_Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -2986,8 +2955,8 @@ SELECT Ck_Id, Ck_Status, Ck_DataCheckIn, Ck_DataCheckOut, Ck_ValorDiaria, Fk_Hos
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Ck_Id, Ck_Status, Ck_DataCheckIn, Ck_DataCheckOut, Ck_ValorDiaria, Fk_Hosp" +
-                "ede, Fk_UnidadeHabitacional FROM dbo.tbCheck";
+            this._commandCollection[0].CommandText = "SELECT Ck_Id, Ck_Status, Ck_DataCheckIn, Ck_DataCheckOut, Fk_Hospede, Fk_UnidadeH" +
+                "abitacional FROM tbCheck";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3048,7 +3017,7 @@ SELECT Ck_Id, Ck_Status, Ck_DataCheckIn, Ck_DataCheckOut, Ck_ValorDiaria, Fk_Hos
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Ck_Id, string Original_Ck_Status, System.DateTime Original_Ck_DataCheckIn, System.DateTime Original_Ck_DataCheckOut, double Original_Ck_ValorDiaria, int Original_Fk_Hospede, int Original_Fk_UnidadeHabitacional) {
+        public virtual int Delete(int Original_Ck_Id, string Original_Ck_Status, System.DateTime Original_Ck_DataCheckIn, System.DateTime Original_Ck_DataCheckOut, int Original_Fk_Hospede, int Original_Fk_UnidadeHabitacional) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Ck_Id));
             if ((Original_Ck_Status == null)) {
                 throw new global::System.ArgumentNullException("Original_Ck_Status");
@@ -3058,9 +3027,8 @@ SELECT Ck_Id, Ck_Status, Ck_DataCheckIn, Ck_DataCheckOut, Ck_ValorDiaria, Fk_Hos
             }
             this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_Ck_DataCheckIn));
             this.Adapter.DeleteCommand.Parameters[3].Value = ((System.DateTime)(Original_Ck_DataCheckOut));
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((double)(Original_Ck_ValorDiaria));
-            this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_Fk_Hospede));
-            this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_Fk_UnidadeHabitacional));
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_Fk_Hospede));
+            this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_Fk_UnidadeHabitacional));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3081,7 +3049,7 @@ SELECT Ck_Id, Ck_Status, Ck_DataCheckIn, Ck_DataCheckOut, Ck_ValorDiaria, Fk_Hos
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Ck_Status, System.DateTime Ck_DataCheckIn, System.DateTime Ck_DataCheckOut, double Ck_ValorDiaria, int Fk_Hospede, int Fk_UnidadeHabitacional) {
+        public virtual int Insert(string Ck_Status, System.DateTime Ck_DataCheckIn, System.DateTime Ck_DataCheckOut, int Fk_Hospede, int Fk_UnidadeHabitacional) {
             if ((Ck_Status == null)) {
                 throw new global::System.ArgumentNullException("Ck_Status");
             }
@@ -3090,9 +3058,8 @@ SELECT Ck_Id, Ck_Status, Ck_DataCheckIn, Ck_DataCheckOut, Ck_ValorDiaria, Fk_Hos
             }
             this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(Ck_DataCheckIn));
             this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(Ck_DataCheckOut));
-            this.Adapter.InsertCommand.Parameters[3].Value = ((double)(Ck_ValorDiaria));
-            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(Fk_Hospede));
-            this.Adapter.InsertCommand.Parameters[5].Value = ((int)(Fk_UnidadeHabitacional));
+            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(Fk_Hospede));
+            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(Fk_UnidadeHabitacional));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3113,7 +3080,7 @@ SELECT Ck_Id, Ck_Status, Ck_DataCheckIn, Ck_DataCheckOut, Ck_ValorDiaria, Fk_Hos
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Ck_Status, System.DateTime Ck_DataCheckIn, System.DateTime Ck_DataCheckOut, double Ck_ValorDiaria, int Fk_Hospede, int Fk_UnidadeHabitacional, int Original_Ck_Id, string Original_Ck_Status, System.DateTime Original_Ck_DataCheckIn, System.DateTime Original_Ck_DataCheckOut, double Original_Ck_ValorDiaria, int Original_Fk_Hospede, int Original_Fk_UnidadeHabitacional, int Ck_Id) {
+        public virtual int Update(string Ck_Status, System.DateTime Ck_DataCheckIn, System.DateTime Ck_DataCheckOut, int Fk_Hospede, int Fk_UnidadeHabitacional, int Original_Ck_Id, string Original_Ck_Status, System.DateTime Original_Ck_DataCheckIn, System.DateTime Original_Ck_DataCheckOut, int Original_Fk_Hospede, int Original_Fk_UnidadeHabitacional, int Ck_Id) {
             if ((Ck_Status == null)) {
                 throw new global::System.ArgumentNullException("Ck_Status");
             }
@@ -3122,22 +3089,20 @@ SELECT Ck_Id, Ck_Status, Ck_DataCheckIn, Ck_DataCheckOut, Ck_ValorDiaria, Fk_Hos
             }
             this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(Ck_DataCheckIn));
             this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(Ck_DataCheckOut));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((double)(Ck_ValorDiaria));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Fk_Hospede));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Fk_UnidadeHabitacional));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_Ck_Id));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Fk_Hospede));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Fk_UnidadeHabitacional));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_Ck_Id));
             if ((Original_Ck_Status == null)) {
                 throw new global::System.ArgumentNullException("Original_Ck_Status");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_Ck_Status));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_Ck_Status));
             }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(Original_Ck_DataCheckIn));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(Original_Ck_DataCheckOut));
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((double)(Original_Ck_ValorDiaria));
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_Fk_Hospede));
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_Fk_UnidadeHabitacional));
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Ck_Id));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(Original_Ck_DataCheckIn));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(Original_Ck_DataCheckOut));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_Fk_Hospede));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_Fk_UnidadeHabitacional));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Ck_Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3158,8 +3123,8 @@ SELECT Ck_Id, Ck_Status, Ck_DataCheckIn, Ck_DataCheckOut, Ck_ValorDiaria, Fk_Hos
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Ck_Status, System.DateTime Ck_DataCheckIn, System.DateTime Ck_DataCheckOut, double Ck_ValorDiaria, int Fk_Hospede, int Fk_UnidadeHabitacional, int Original_Ck_Id, string Original_Ck_Status, System.DateTime Original_Ck_DataCheckIn, System.DateTime Original_Ck_DataCheckOut, double Original_Ck_ValorDiaria, int Original_Fk_Hospede, int Original_Fk_UnidadeHabitacional) {
-            return this.Update(Ck_Status, Ck_DataCheckIn, Ck_DataCheckOut, Ck_ValorDiaria, Fk_Hospede, Fk_UnidadeHabitacional, Original_Ck_Id, Original_Ck_Status, Original_Ck_DataCheckIn, Original_Ck_DataCheckOut, Original_Ck_ValorDiaria, Original_Fk_Hospede, Original_Fk_UnidadeHabitacional, Original_Ck_Id);
+        public virtual int Update(string Ck_Status, System.DateTime Ck_DataCheckIn, System.DateTime Ck_DataCheckOut, int Fk_Hospede, int Fk_UnidadeHabitacional, int Original_Ck_Id, string Original_Ck_Status, System.DateTime Original_Ck_DataCheckIn, System.DateTime Original_Ck_DataCheckOut, int Original_Fk_Hospede, int Original_Fk_UnidadeHabitacional) {
+            return this.Update(Ck_Status, Ck_DataCheckIn, Ck_DataCheckOut, Fk_Hospede, Fk_UnidadeHabitacional, Original_Ck_Id, Original_Ck_Status, Original_Ck_DataCheckIn, Original_Ck_DataCheckOut, Original_Fk_Hospede, Original_Fk_UnidadeHabitacional, Original_Ck_Id);
         }
     }
     
