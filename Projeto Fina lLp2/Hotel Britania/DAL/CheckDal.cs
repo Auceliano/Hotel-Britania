@@ -119,5 +119,47 @@ namespace Hotel_Britania.DAL
 
             return check;
         }
+
+        public void Alterar(CheckBll check)
+        {
+            //1 - Criar uma conexão com BD
+            SqlConnection conexao = new SqlConnection();
+
+            //2 - Configurara a conexão
+            conexao.ConnectionString = ConfigurationManager.ConnectionStrings["conexaoBD"].ConnectionString;
+
+            //3 - Criar um comando
+            SqlCommand comando = conexao.CreateCommand();
+
+            //4 - Especificar o tipo de comando
+            comando.CommandType = System.Data.CommandType.Text;
+
+            //5 - Especificar o comando
+            comando.CommandText = "UPDATE tbCheck " +
+                "SET CK_STATUS = @CK_STATUS, " +
+                    "CK_DATACHECKIN = @CK_DATACHECKIN, " +
+                    "CK_DATACHECKOUT = @CK_DATACHECKOUT, " +
+                    "FK_HOSPEDE = @FK_HOSPEDE, " +
+                    "FK_UNIDADEHABITACIONAL = @FK_UNIDADEHABITACIONAL " +
+                    "WHERE CK_ID = @CK_ID";
+
+
+            comando.Parameters.AddWithValue("@CK_ID", check.CodigoIn);
+            comando.Parameters.AddWithValue("@CK_STATUS", check.StatusCk);
+            comando.Parameters.AddWithValue("@CK_DATACHECKIN", check.DataCheckIn);
+            comando.Parameters.AddWithValue("@CK_DATACHECKOUT", check.DataCheckOut);
+            comando.Parameters.AddWithValue("@FK_HOSPEDE", check.CodigoHos);
+            comando.Parameters.AddWithValue("@FK_UNIDADEHABITACIONAL", check.CodigoUni);
+
+            //6 - Abrir  a conexão
+            conexao.Open();
+
+            //7 - Executar o comando
+            comando.ExecuteNonQuery();
+
+            //8 - Fexar a conexão
+            conexao.Close();
+        }
+
     }
 }

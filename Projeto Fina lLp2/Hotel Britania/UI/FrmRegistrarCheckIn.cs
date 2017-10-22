@@ -14,9 +14,37 @@ namespace Hotel_Britania
 {
     public partial class FrmRegistrarCheckIn : Form
     {
+        CheckBll update = null;
+        UnidadeHabitacionalBll unidade = null;
+        HospedeBll hospede = null;
+
         public FrmRegistrarCheckIn()
         {
             InitializeComponent();
+        }
+
+        public FrmRegistrarCheckIn(CheckBll update)
+        {
+            InitializeComponent();
+
+            this.update = update;
+            this.unidade = new UnidadeHabitacionalDal().Obter(update.CodigoUni);
+            this.hospede = new HospedeDal().Obter(update.CodigoHos);
+            txtNomeUni.Text = hospede.NomeHos;
+            txtValorDiaria.Text = unidade.ValorDiariaUni;
+            dtpDataCheckIn.Value = update.DataCheckIn;
+            dtpDataCheckOut.Value = update.DataCheckOut;
+            txtHospede.Text = hospede.NomeHos;
+            txtCpfHos.Text = hospede.CPFHos;
+            cbbStatus.Text = update.StatusCk;
+            // Difference in days, hours, and minutes.
+            TimeSpan ts = update.DataCheckOut - update.DataCheckOut;
+            // Difference in days.
+            int differenceInDays = ts.Days;
+            txtDespesas.Text = Convert.ToString(differenceInDays * Convert.ToDouble(unidade.ValorDiariaUni));
+
+
+            btnSalvar.Text = "&Altera";
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -25,18 +53,26 @@ namespace Hotel_Britania
             {
                 CheckBll entidade = new CheckBll();
                 CheckDal dados = new CheckDal();
-
-                if (cboStatus.Checked)
-                    entidade.StatusCk = "Reserva";
-                else
-                    entidade.StatusCk = "CheckIn";
-
+                                
+                entidade.StatusCk = cbbStatus.Text;
                 entidade.DataCheckIn = dtpDataCheckIn.Value;
                 entidade.DataCheckOut = dtpDataCheckOut.Value;
-                entidade.CodigoHos = Convert.ToInt32(dgvHospede.CurrentRow.Cells[0].Value);
-                entidade.CodigoUni = Convert.ToInt32(dgvUnidadeHabitacional.CurrentRow.Cells[0].Value);
+                if (update != null)
+                {
+                    entidade.CodigoHos = update.CodigoHos;
+                    entidade.CodigoUni = update.CodigoUni;
+                }
+                else
+                {
+                    entidade.CodigoHos = Convert.ToInt32(dgvHospede.CurrentRow.Cells[0].Value);
+                    entidade.CodigoUni = Convert.ToInt32(dgvUnidadeHabitacional.CurrentRow.Cells[0].Value);
+                }
+                    
 
-                dados.Salva(entidade);
+                if (update != null)
+                    dados.Alterar(entidade);
+                else
+                    dados.Salva(entidade);
 
                 MessageBox.Show("Os dados foram salvos com sucesso!", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
@@ -117,7 +153,9 @@ namespace Hotel_Britania
             dtpDataCheckIn.Value = DateTime.Now;
             dtpDataCheckOut.Value = DateTime.Now;
             txtHospede.Text = null;
-            cboStatus.Checked = false;
+            txtCpfHos.Text = null;
+            cbbStatus.Text = null;
+            txtDespesas.Text = null;
         }
 
         private void btnRemover_Click(object sender, EventArgs e)
@@ -143,11 +181,13 @@ namespace Hotel_Britania
         {
             txtNomeUni.Text = dgvUnidadeHabitacional.CurrentRow.Cells[2].Value.ToString();
             txtValorDiaria.Text = dgvUnidadeHabitacional.CurrentRow.Cells[3].Value.ToString();
+            
         }
 
         private void dgvHospede_CellMouseClick_1(object sender, DataGridViewCellMouseEventArgs e)
         {
             txtHospede.Text = dgvHospede.CurrentRow.Cells[1].Value.ToString();
+            txtCpfHos.Text = dgvHospede.CurrentRow.Cells[5].Value.ToString();
         }
     }
 }

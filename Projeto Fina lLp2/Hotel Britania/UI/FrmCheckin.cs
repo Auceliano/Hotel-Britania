@@ -31,7 +31,6 @@ namespace Hotel_Britania
             btnInserir.Enabled = false;
             btnAlterar.Enabled = true;
             btnExcluir.Enabled = true;
-            btnCheckOut.Enabled = true;
             btnCancelar.Enabled = true;
         }
 
@@ -40,7 +39,6 @@ namespace Hotel_Britania
             btnInserir.Enabled = true;
             btnAlterar.Enabled = false;
             btnExcluir.Enabled = false;
-            btnCheckOut.Enabled = false;
             btnCancelar.Enabled = false;
         }
 
@@ -54,25 +52,13 @@ namespace Hotel_Britania
                 btnInserir.Enabled = true;
                 btnAlterar.Enabled = false;
                 btnExcluir.Enabled = false;
-                btnCheckOut.Enabled = false;
                 btnCancelar.Enabled = false;
 
                 MessageBox.Show("Dados apagados com, sucesso?", "ok", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
-        private void btnCheckOut_Click(object sender, EventArgs e)
-        {
-            CheckBll check = new CheckBll();
-            CheckDal dados = new CheckDal();
-
-            check = dados.Obter(Convert.ToInt32(dataCheckIn.CurrentRow.Cells[0].Value));
-
-            FrmRegistrarCheckOut checkOut = new FrmRegistrarCheckOut(check);
-            checkOut.ShowDialog();
-            
-        }
-
+        
         private void FrmCheckin_Load(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'hotelBDDataSet.tbCheck'. Você pode movê-la ou removê-la conforme necessário.
@@ -85,8 +71,16 @@ namespace Hotel_Britania
             btnInserir.Enabled = false;
             btnAlterar.Enabled = true;
             btnExcluir.Enabled = true;
-            btnCheckOut.Enabled = true;
             btnCancelar.Enabled = true;
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            //Reserva, CheckIn ou CheckOut.
+            CheckBll update = new CheckDal().Obter(Convert.ToInt32(dataCheckIn.CurrentRow.Cells[0].Value));
+            FrmRegistrarCheckIn frmUpdate = new FrmRegistrarCheckIn(update);
+            frmUpdate.ShowDialog();
+
         }
     }
 }

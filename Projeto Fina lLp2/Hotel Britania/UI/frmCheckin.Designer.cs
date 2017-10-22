@@ -44,17 +44,16 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.gpbRegistrosCheckIn = new System.Windows.Forms.GroupBox();
-            this.btnCheckOut = new System.Windows.Forms.Button();
             this.dataCheckIn = new System.Windows.Forms.DataGridView();
-            this.tbCheckBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hotelBDDataSet = new Hotel_Britania.HotelBDDataSet();
-            this.tbCheckTableAdapter = new Hotel_Britania.HotelBDDataSetTableAdapters.tbCheckTableAdapter();
             this.ckIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ckStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ckDataCheckInDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ckDataCheckOutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fkHospedeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fkUnidadeHabitacionalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tbCheckBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hotelBDDataSet = new Hotel_Britania.HotelBDDataSet();
+            this.tbCheckTableAdapter = new Hotel_Britania.HotelBDDataSetTableAdapters.tbCheckTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pcbFuncionario)).BeginInit();
             this.gpbPesquisa.SuspendLayout();
             this.gpbRegistrosCheckIn.SuspendLayout();
@@ -209,6 +208,7 @@
             this.btnAlterar.TabIndex = 40;
             this.btnAlterar.Text = "&Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // gpbRegistrosCheckIn
             // 
@@ -222,17 +222,6 @@
             this.gpbRegistrosCheckIn.TabIndex = 43;
             this.gpbRegistrosCheckIn.TabStop = false;
             this.gpbRegistrosCheckIn.Text = "Registros";
-            // 
-            // btnCheckOut
-            // 
-            this.btnCheckOut.Enabled = false;
-            this.btnCheckOut.Location = new System.Drawing.Point(264, 317);
-            this.btnCheckOut.Name = "btnCheckOut";
-            this.btnCheckOut.Size = new System.Drawing.Size(75, 23);
-            this.btnCheckOut.TabIndex = 44;
-            this.btnCheckOut.Text = "&Check-Out";
-            this.btnCheckOut.UseVisualStyleBackColor = true;
-            this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
             // 
             // dataCheckIn
             // 
@@ -255,20 +244,6 @@
             this.dataCheckIn.Size = new System.Drawing.Size(652, 215);
             this.dataCheckIn.TabIndex = 0;
             this.dataCheckIn.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataCheckIn_CellMouseClick_1);
-            // 
-            // tbCheckBindingSource
-            // 
-            this.tbCheckBindingSource.DataMember = "tbCheck";
-            this.tbCheckBindingSource.DataSource = this.hotelBDDataSet;
-            // 
-            // hotelBDDataSet
-            // 
-            this.hotelBDDataSet.DataSetName = "HotelBDDataSet";
-            this.hotelBDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tbCheckTableAdapter
-            // 
-            this.tbCheckTableAdapter.ClearBeforeFill = true;
             // 
             // ckIdDataGridViewTextBoxColumn
             // 
@@ -312,12 +287,25 @@
             this.fkUnidadeHabitacionalDataGridViewTextBoxColumn.Name = "fkUnidadeHabitacionalDataGridViewTextBoxColumn";
             this.fkUnidadeHabitacionalDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // tbCheckBindingSource
+            // 
+            this.tbCheckBindingSource.DataMember = "tbCheck";
+            this.tbCheckBindingSource.DataSource = this.hotelBDDataSet;
+            // 
+            // hotelBDDataSet
+            // 
+            this.hotelBDDataSet.DataSetName = "HotelBDDataSet";
+            this.hotelBDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tbCheckTableAdapter
+            // 
+            this.tbCheckTableAdapter.ClearBeforeFill = true;
+            // 
             // FrmCheckin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(663, 352);
-            this.Controls.Add(this.btnCheckOut);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnInserir);
             this.Controls.Add(this.btnCancelar);
@@ -360,7 +348,6 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.GroupBox gpbRegistrosCheckIn;
-        private System.Windows.Forms.Button btnCheckOut;
         private System.Windows.Forms.DataGridView dataCheckIn;
         private HotelBDDataSet hotelBDDataSet;
         private System.Windows.Forms.BindingSource tbCheckBindingSource;

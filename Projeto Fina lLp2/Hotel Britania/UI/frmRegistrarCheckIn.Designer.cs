@@ -31,7 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistrarCheckIn));
             this.gpbCheck = new System.Windows.Forms.GroupBox();
-            this.cboStatus = new System.Windows.Forms.CheckBox();
+            this.txtDespesas = new System.Windows.Forms.TextBox();
+            this.txtCpfHos = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblGastos = new System.Windows.Forms.Label();
+            this.lblStatus = new System.Windows.Forms.Label();
+            this.cbbStatus = new System.Windows.Forms.ComboBox();
             this.lblDataCheckOut = new System.Windows.Forms.Label();
             this.dtpDataCheckOut = new System.Windows.Forms.DateTimePicker();
             this.lblDataCheckIn = new System.Windows.Forms.Label();
@@ -46,32 +51,7 @@
             this.gpbAddHodUni = new System.Windows.Forms.GroupBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabpUnidadeHabitacional = new System.Windows.Forms.TabPage();
-            this.txtASK = new System.Windows.Forms.TextBox();
-            this.lblNome = new System.Windows.Forms.Label();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.tabpHospede = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnSalvar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.dgvHospede = new System.Windows.Forms.DataGridView();
-            this.hotelBDDataSet = new Hotel_Britania.HotelBDDataSet();
-            this.tbHospedeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tbHospedeTableAdapter = new Hotel_Britania.HotelBDDataSetTableAdapters.tbHospedeTableAdapter();
-            this.hosIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hosNomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hosNaturalidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hosUfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hosNacionalidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hosCpfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hosSexoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hosDataNascimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hosTelefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hosEMailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvUnidadeHabitacional = new System.Windows.Forms.DataGridView();
-            this.tbUnidadeHabitacionalBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tbUnidadeHabitacionalTableAdapter = new Hotel_Britania.HotelBDDataSetTableAdapters.tbUnidadeHabitacionalTableAdapter();
             this.uniIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.uniNomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.uniNumeroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -83,21 +63,51 @@
             this.uniClimatizadorDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.uniFrigobarDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.uniWirelessDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.tbUnidadeHabitacionalBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hotelBDDataSet = new Hotel_Britania.HotelBDDataSet();
+            this.txtASK = new System.Windows.Forms.TextBox();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.tabpHospede = new System.Windows.Forms.TabPage();
+            this.dgvHospede = new System.Windows.Forms.DataGridView();
+            this.hosIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hosNomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hosNaturalidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hosUfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hosNacionalidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hosCpfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hosSexoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hosDataNascimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hosTelefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hosEMailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tbHospedeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.tbHospedeTableAdapter = new Hotel_Britania.HotelBDDataSetTableAdapters.tbHospedeTableAdapter();
+            this.tbUnidadeHabitacionalTableAdapter = new Hotel_Britania.HotelBDDataSetTableAdapters.tbUnidadeHabitacionalTableAdapter();
             this.gpbCheck.SuspendLayout();
             this.gpbAddHodUni.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabpUnidadeHabitacional.SuspendLayout();
-            this.tabpHospede.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHospede)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hotelBDDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbHospedeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUnidadeHabitacional)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbUnidadeHabitacionalBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelBDDataSet)).BeginInit();
+            this.tabpHospede.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHospede)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbHospedeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // gpbCheck
             // 
-            this.gpbCheck.Controls.Add(this.cboStatus);
+            this.gpbCheck.Controls.Add(this.txtDespesas);
+            this.gpbCheck.Controls.Add(this.txtCpfHos);
+            this.gpbCheck.Controls.Add(this.label1);
+            this.gpbCheck.Controls.Add(this.lblGastos);
+            this.gpbCheck.Controls.Add(this.lblStatus);
+            this.gpbCheck.Controls.Add(this.cbbStatus);
             this.gpbCheck.Controls.Add(this.lblDataCheckOut);
             this.gpbCheck.Controls.Add(this.dtpDataCheckOut);
             this.gpbCheck.Controls.Add(this.lblDataCheckIn);
@@ -115,20 +125,64 @@
             this.gpbCheck.TabStop = false;
             this.gpbCheck.Text = "Check";
             // 
-            // cboStatus
+            // txtDespesas
             // 
-            this.cboStatus.AutoSize = true;
-            this.cboStatus.Location = new System.Drawing.Point(11, 234);
-            this.cboStatus.Name = "cboStatus";
-            this.cboStatus.Size = new System.Drawing.Size(72, 17);
-            this.cboStatus.TabIndex = 17;
-            this.cboStatus.Text = "Reserva?";
-            this.cboStatus.UseVisualStyleBackColor = true;
+            this.txtDespesas.Location = new System.Drawing.Point(57, 235);
+            this.txtDespesas.Name = "txtDespesas";
+            this.txtDespesas.Size = new System.Drawing.Size(201, 20);
+            this.txtDespesas.TabIndex = 46;
+            // 
+            // txtCpfHos
+            // 
+            this.txtCpfHos.Location = new System.Drawing.Point(46, 174);
+            this.txtCpfHos.MaxLength = 6;
+            this.txtCpfHos.Name = "txtCpfHos";
+            this.txtCpfHos.Size = new System.Drawing.Size(212, 20);
+            this.txtCpfHos.TabIndex = 45;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(10, 177);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(30, 13);
+            this.label1.TabIndex = 44;
+            this.label1.Text = "CPF:";
+            // 
+            // lblGastos
+            // 
+            this.lblGastos.AutoSize = true;
+            this.lblGastos.Location = new System.Drawing.Point(8, 238);
+            this.lblGastos.Name = "lblGastos";
+            this.lblGastos.Size = new System.Drawing.Size(43, 13);
+            this.lblGastos.TabIndex = 43;
+            this.lblGastos.Text = "Gastos:";
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Location = new System.Drawing.Point(7, 207);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(40, 13);
+            this.lblStatus.TabIndex = 42;
+            this.lblStatus.Text = "Status:";
+            // 
+            // cbbStatus
+            // 
+            this.cbbStatus.FormattingEnabled = true;
+            this.cbbStatus.Items.AddRange(new object[] {
+            "Reserva",
+            "CheckIn",
+            "CheckOut"});
+            this.cbbStatus.Location = new System.Drawing.Point(53, 204);
+            this.cbbStatus.Name = "cbbStatus";
+            this.cbbStatus.Size = new System.Drawing.Size(205, 21);
+            this.cbbStatus.TabIndex = 41;
             // 
             // lblDataCheckOut
             // 
             this.lblDataCheckOut.AutoSize = true;
-            this.lblDataCheckOut.Location = new System.Drawing.Point(10, 95);
+            this.lblDataCheckOut.Location = new System.Drawing.Point(10, 98);
             this.lblDataCheckOut.Name = "lblDataCheckOut";
             this.lblDataCheckOut.Size = new System.Drawing.Size(151, 13);
             this.lblDataCheckOut.TabIndex = 16;
@@ -136,9 +190,9 @@
             // 
             // dtpDataCheckOut
             // 
-            this.dtpDataCheckOut.Location = new System.Drawing.Point(11, 111);
+            this.dtpDataCheckOut.Location = new System.Drawing.Point(10, 114);
             this.dtpDataCheckOut.Name = "dtpDataCheckOut";
-            this.dtpDataCheckOut.Size = new System.Drawing.Size(247, 20);
+            this.dtpDataCheckOut.Size = new System.Drawing.Size(248, 20);
             this.dtpDataCheckOut.TabIndex = 15;
             this.dtpDataCheckOut.Value = new System.DateTime(2017, 10, 22, 0, 0, 0, 0);
             // 
@@ -153,15 +207,14 @@
             // 
             // dtpDataCheckIn
             // 
-            this.dtpDataCheckIn.Location = new System.Drawing.Point(11, 72);
+            this.dtpDataCheckIn.Location = new System.Drawing.Point(10, 76);
             this.dtpDataCheckIn.Name = "dtpDataCheckIn";
-            this.dtpDataCheckIn.Size = new System.Drawing.Size(247, 20);
+            this.dtpDataCheckIn.Size = new System.Drawing.Size(248, 20);
             this.dtpDataCheckIn.TabIndex = 2;
             this.dtpDataCheckIn.Value = new System.DateTime(2017, 10, 22, 0, 0, 0, 0);
             // 
             // txtValorDiaria
             // 
-            this.txtValorDiaria.Enabled = false;
             this.txtValorDiaria.Location = new System.Drawing.Point(182, 33);
             this.txtValorDiaria.MaxLength = 8;
             this.txtValorDiaria.Name = "txtValorDiaria";
@@ -179,11 +232,10 @@
             // 
             // txtHospede
             // 
-            this.txtHospede.Enabled = false;
-            this.txtHospede.Location = new System.Drawing.Point(11, 164);
+            this.txtHospede.Location = new System.Drawing.Point(62, 145);
             this.txtHospede.Multiline = true;
             this.txtHospede.Name = "txtHospede";
-            this.txtHospede.Size = new System.Drawing.Size(247, 20);
+            this.txtHospede.Size = new System.Drawing.Size(196, 20);
             this.txtHospede.TabIndex = 3;
             // 
             // lblHospedes
@@ -191,13 +243,12 @@
             this.lblHospedes.AutoSize = true;
             this.lblHospedes.Location = new System.Drawing.Point(8, 148);
             this.lblHospedes.Name = "lblHospedes";
-            this.lblHospedes.Size = new System.Drawing.Size(48, 13);
+            this.lblHospedes.Size = new System.Drawing.Size(53, 13);
             this.lblHospedes.TabIndex = 10;
-            this.lblHospedes.Text = "Hópede:";
+            this.lblHospedes.Text = "Hóspede:";
             // 
             // txtNomeUni
             // 
-            this.txtNomeUni.Enabled = false;
             this.txtNomeUni.Location = new System.Drawing.Point(10, 33);
             this.txtNomeUni.MaxLength = 6;
             this.txtNomeUni.Name = "txtNomeUni";
@@ -258,202 +309,6 @@
             this.tabpUnidadeHabitacional.Text = "Unidade Habitacional";
             this.tabpUnidadeHabitacional.UseVisualStyleBackColor = true;
             // 
-            // txtASK
-            // 
-            this.txtASK.Location = new System.Drawing.Point(50, 11);
-            this.txtASK.Name = "txtASK";
-            this.txtASK.Size = new System.Drawing.Size(352, 20);
-            this.txtASK.TabIndex = 41;
-            // 
-            // lblNome
-            // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(6, 14);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(38, 13);
-            this.lblNome.TabIndex = 43;
-            this.lblNome.Text = "Nome:";
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(408, 10);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 42;
-            this.btnBuscar.Text = "&Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            // 
-            // tabpHospede
-            // 
-            this.tabpHospede.Controls.Add(this.dgvHospede);
-            this.tabpHospede.Controls.Add(this.textBox1);
-            this.tabpHospede.Controls.Add(this.label2);
-            this.tabpHospede.Controls.Add(this.button1);
-            this.tabpHospede.Location = new System.Drawing.Point(4, 22);
-            this.tabpHospede.Name = "tabpHospede";
-            this.tabpHospede.Padding = new System.Windows.Forms.Padding(3);
-            this.tabpHospede.Size = new System.Drawing.Size(488, 251);
-            this.tabpHospede.TabIndex = 1;
-            this.tabpHospede.Text = "Hóspede";
-            this.tabpHospede.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(50, 11);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(352, 20);
-            this.textBox1.TabIndex = 45;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 14);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
-            this.label2.TabIndex = 47;
-            this.label2.Text = "Nome:";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(408, 10);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 46;
-            this.button1.Text = "&Buscar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalvar.Location = new System.Drawing.Point(11, 309);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
-            this.btnSalvar.TabIndex = 37;
-            this.btnSalvar.Text = "&Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = true;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelar.Location = new System.Drawing.Point(708, 309);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 38;
-            this.btnCancelar.Text = "&Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // dgvHospede
-            // 
-            this.dgvHospede.AllowUserToAddRows = false;
-            this.dgvHospede.AllowUserToDeleteRows = false;
-            this.dgvHospede.AllowUserToOrderColumns = true;
-            this.dgvHospede.AutoGenerateColumns = false;
-            this.dgvHospede.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHospede.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.hosIdDataGridViewTextBoxColumn,
-            this.hosNomeDataGridViewTextBoxColumn,
-            this.hosNaturalidadeDataGridViewTextBoxColumn,
-            this.hosUfDataGridViewTextBoxColumn,
-            this.hosNacionalidadeDataGridViewTextBoxColumn,
-            this.hosCpfDataGridViewTextBoxColumn,
-            this.hosSexoDataGridViewTextBoxColumn,
-            this.hosDataNascimentoDataGridViewTextBoxColumn,
-            this.hosTelefoneDataGridViewTextBoxColumn,
-            this.hosEMailDataGridViewTextBoxColumn});
-            this.dgvHospede.DataSource = this.tbHospedeBindingSource;
-            this.dgvHospede.Location = new System.Drawing.Point(3, 37);
-            this.dgvHospede.Name = "dgvHospede";
-            this.dgvHospede.ReadOnly = true;
-            this.dgvHospede.Size = new System.Drawing.Size(483, 214);
-            this.dgvHospede.TabIndex = 48;
-            this.dgvHospede.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvHospede_CellMouseClick_1);
-            // 
-            // hotelBDDataSet
-            // 
-            this.hotelBDDataSet.DataSetName = "HotelBDDataSet";
-            this.hotelBDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tbHospedeBindingSource
-            // 
-            this.tbHospedeBindingSource.DataMember = "tbHospede";
-            this.tbHospedeBindingSource.DataSource = this.hotelBDDataSet;
-            // 
-            // tbHospedeTableAdapter
-            // 
-            this.tbHospedeTableAdapter.ClearBeforeFill = true;
-            // 
-            // hosIdDataGridViewTextBoxColumn
-            // 
-            this.hosIdDataGridViewTextBoxColumn.DataPropertyName = "Hos_Id";
-            this.hosIdDataGridViewTextBoxColumn.HeaderText = "Hos_Id";
-            this.hosIdDataGridViewTextBoxColumn.Name = "hosIdDataGridViewTextBoxColumn";
-            this.hosIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // hosNomeDataGridViewTextBoxColumn
-            // 
-            this.hosNomeDataGridViewTextBoxColumn.DataPropertyName = "Hos_Nome";
-            this.hosNomeDataGridViewTextBoxColumn.HeaderText = "Hos_Nome";
-            this.hosNomeDataGridViewTextBoxColumn.Name = "hosNomeDataGridViewTextBoxColumn";
-            this.hosNomeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // hosNaturalidadeDataGridViewTextBoxColumn
-            // 
-            this.hosNaturalidadeDataGridViewTextBoxColumn.DataPropertyName = "Hos_Naturalidade";
-            this.hosNaturalidadeDataGridViewTextBoxColumn.HeaderText = "Hos_Naturalidade";
-            this.hosNaturalidadeDataGridViewTextBoxColumn.Name = "hosNaturalidadeDataGridViewTextBoxColumn";
-            this.hosNaturalidadeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // hosUfDataGridViewTextBoxColumn
-            // 
-            this.hosUfDataGridViewTextBoxColumn.DataPropertyName = "Hos_Uf";
-            this.hosUfDataGridViewTextBoxColumn.HeaderText = "Hos_Uf";
-            this.hosUfDataGridViewTextBoxColumn.Name = "hosUfDataGridViewTextBoxColumn";
-            this.hosUfDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // hosNacionalidadeDataGridViewTextBoxColumn
-            // 
-            this.hosNacionalidadeDataGridViewTextBoxColumn.DataPropertyName = "Hos_Nacionalidade";
-            this.hosNacionalidadeDataGridViewTextBoxColumn.HeaderText = "Hos_Nacionalidade";
-            this.hosNacionalidadeDataGridViewTextBoxColumn.Name = "hosNacionalidadeDataGridViewTextBoxColumn";
-            this.hosNacionalidadeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // hosCpfDataGridViewTextBoxColumn
-            // 
-            this.hosCpfDataGridViewTextBoxColumn.DataPropertyName = "Hos_Cpf";
-            this.hosCpfDataGridViewTextBoxColumn.HeaderText = "Hos_Cpf";
-            this.hosCpfDataGridViewTextBoxColumn.Name = "hosCpfDataGridViewTextBoxColumn";
-            this.hosCpfDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // hosSexoDataGridViewTextBoxColumn
-            // 
-            this.hosSexoDataGridViewTextBoxColumn.DataPropertyName = "Hos_Sexo";
-            this.hosSexoDataGridViewTextBoxColumn.HeaderText = "Hos_Sexo";
-            this.hosSexoDataGridViewTextBoxColumn.Name = "hosSexoDataGridViewTextBoxColumn";
-            this.hosSexoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // hosDataNascimentoDataGridViewTextBoxColumn
-            // 
-            this.hosDataNascimentoDataGridViewTextBoxColumn.DataPropertyName = "Hos_DataNascimento";
-            this.hosDataNascimentoDataGridViewTextBoxColumn.HeaderText = "Hos_DataNascimento";
-            this.hosDataNascimentoDataGridViewTextBoxColumn.Name = "hosDataNascimentoDataGridViewTextBoxColumn";
-            this.hosDataNascimentoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // hosTelefoneDataGridViewTextBoxColumn
-            // 
-            this.hosTelefoneDataGridViewTextBoxColumn.DataPropertyName = "Hos_Telefone";
-            this.hosTelefoneDataGridViewTextBoxColumn.HeaderText = "Hos_Telefone";
-            this.hosTelefoneDataGridViewTextBoxColumn.Name = "hosTelefoneDataGridViewTextBoxColumn";
-            this.hosTelefoneDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // hosEMailDataGridViewTextBoxColumn
-            // 
-            this.hosEMailDataGridViewTextBoxColumn.DataPropertyName = "Hos_EMail";
-            this.hosEMailDataGridViewTextBoxColumn.HeaderText = "Hos_EMail";
-            this.hosEMailDataGridViewTextBoxColumn.Name = "hosEMailDataGridViewTextBoxColumn";
-            this.hosEMailDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // dgvUnidadeHabitacional
             // 
             this.dgvUnidadeHabitacional.AllowUserToAddRows = false;
@@ -480,15 +335,6 @@
             this.dgvUnidadeHabitacional.Size = new System.Drawing.Size(483, 212);
             this.dgvUnidadeHabitacional.TabIndex = 44;
             this.dgvUnidadeHabitacional.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvUnidadeHabitacional_CellMouseClick_1);
-            // 
-            // tbUnidadeHabitacionalBindingSource
-            // 
-            this.tbUnidadeHabitacionalBindingSource.DataMember = "tbUnidadeHabitacional";
-            this.tbUnidadeHabitacionalBindingSource.DataSource = this.hotelBDDataSet;
-            // 
-            // tbUnidadeHabitacionalTableAdapter
-            // 
-            this.tbUnidadeHabitacionalTableAdapter.ClearBeforeFill = true;
             // 
             // uniIdDataGridViewTextBoxColumn
             // 
@@ -567,6 +413,211 @@
             this.uniWirelessDataGridViewCheckBoxColumn.Name = "uniWirelessDataGridViewCheckBoxColumn";
             this.uniWirelessDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
+            // tbUnidadeHabitacionalBindingSource
+            // 
+            this.tbUnidadeHabitacionalBindingSource.DataMember = "tbUnidadeHabitacional";
+            this.tbUnidadeHabitacionalBindingSource.DataSource = this.hotelBDDataSet;
+            // 
+            // hotelBDDataSet
+            // 
+            this.hotelBDDataSet.DataSetName = "HotelBDDataSet";
+            this.hotelBDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // txtASK
+            // 
+            this.txtASK.Location = new System.Drawing.Point(50, 11);
+            this.txtASK.Name = "txtASK";
+            this.txtASK.Size = new System.Drawing.Size(352, 20);
+            this.txtASK.TabIndex = 41;
+            // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.Location = new System.Drawing.Point(6, 14);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(38, 13);
+            this.lblNome.TabIndex = 43;
+            this.lblNome.Text = "Nome:";
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(408, 10);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 42;
+            this.btnBuscar.Text = "&Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            // 
+            // tabpHospede
+            // 
+            this.tabpHospede.Controls.Add(this.dgvHospede);
+            this.tabpHospede.Controls.Add(this.textBox1);
+            this.tabpHospede.Controls.Add(this.label2);
+            this.tabpHospede.Controls.Add(this.button1);
+            this.tabpHospede.Location = new System.Drawing.Point(4, 22);
+            this.tabpHospede.Name = "tabpHospede";
+            this.tabpHospede.Padding = new System.Windows.Forms.Padding(3);
+            this.tabpHospede.Size = new System.Drawing.Size(488, 251);
+            this.tabpHospede.TabIndex = 1;
+            this.tabpHospede.Text = "Hóspede";
+            this.tabpHospede.UseVisualStyleBackColor = true;
+            // 
+            // dgvHospede
+            // 
+            this.dgvHospede.AllowUserToAddRows = false;
+            this.dgvHospede.AllowUserToDeleteRows = false;
+            this.dgvHospede.AllowUserToOrderColumns = true;
+            this.dgvHospede.AutoGenerateColumns = false;
+            this.dgvHospede.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHospede.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.hosIdDataGridViewTextBoxColumn,
+            this.hosNomeDataGridViewTextBoxColumn,
+            this.hosNaturalidadeDataGridViewTextBoxColumn,
+            this.hosUfDataGridViewTextBoxColumn,
+            this.hosNacionalidadeDataGridViewTextBoxColumn,
+            this.hosCpfDataGridViewTextBoxColumn,
+            this.hosSexoDataGridViewTextBoxColumn,
+            this.hosDataNascimentoDataGridViewTextBoxColumn,
+            this.hosTelefoneDataGridViewTextBoxColumn,
+            this.hosEMailDataGridViewTextBoxColumn});
+            this.dgvHospede.DataSource = this.tbHospedeBindingSource;
+            this.dgvHospede.Location = new System.Drawing.Point(3, 37);
+            this.dgvHospede.Name = "dgvHospede";
+            this.dgvHospede.ReadOnly = true;
+            this.dgvHospede.Size = new System.Drawing.Size(483, 214);
+            this.dgvHospede.TabIndex = 48;
+            this.dgvHospede.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvHospede_CellMouseClick_1);
+            // 
+            // hosIdDataGridViewTextBoxColumn
+            // 
+            this.hosIdDataGridViewTextBoxColumn.DataPropertyName = "Hos_Id";
+            this.hosIdDataGridViewTextBoxColumn.HeaderText = "Hos_Id";
+            this.hosIdDataGridViewTextBoxColumn.Name = "hosIdDataGridViewTextBoxColumn";
+            this.hosIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hosNomeDataGridViewTextBoxColumn
+            // 
+            this.hosNomeDataGridViewTextBoxColumn.DataPropertyName = "Hos_Nome";
+            this.hosNomeDataGridViewTextBoxColumn.HeaderText = "Hos_Nome";
+            this.hosNomeDataGridViewTextBoxColumn.Name = "hosNomeDataGridViewTextBoxColumn";
+            this.hosNomeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hosNaturalidadeDataGridViewTextBoxColumn
+            // 
+            this.hosNaturalidadeDataGridViewTextBoxColumn.DataPropertyName = "Hos_Naturalidade";
+            this.hosNaturalidadeDataGridViewTextBoxColumn.HeaderText = "Hos_Naturalidade";
+            this.hosNaturalidadeDataGridViewTextBoxColumn.Name = "hosNaturalidadeDataGridViewTextBoxColumn";
+            this.hosNaturalidadeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hosUfDataGridViewTextBoxColumn
+            // 
+            this.hosUfDataGridViewTextBoxColumn.DataPropertyName = "Hos_Uf";
+            this.hosUfDataGridViewTextBoxColumn.HeaderText = "Hos_Uf";
+            this.hosUfDataGridViewTextBoxColumn.Name = "hosUfDataGridViewTextBoxColumn";
+            this.hosUfDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hosNacionalidadeDataGridViewTextBoxColumn
+            // 
+            this.hosNacionalidadeDataGridViewTextBoxColumn.DataPropertyName = "Hos_Nacionalidade";
+            this.hosNacionalidadeDataGridViewTextBoxColumn.HeaderText = "Hos_Nacionalidade";
+            this.hosNacionalidadeDataGridViewTextBoxColumn.Name = "hosNacionalidadeDataGridViewTextBoxColumn";
+            this.hosNacionalidadeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hosCpfDataGridViewTextBoxColumn
+            // 
+            this.hosCpfDataGridViewTextBoxColumn.DataPropertyName = "Hos_Cpf";
+            this.hosCpfDataGridViewTextBoxColumn.HeaderText = "Hos_Cpf";
+            this.hosCpfDataGridViewTextBoxColumn.Name = "hosCpfDataGridViewTextBoxColumn";
+            this.hosCpfDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hosSexoDataGridViewTextBoxColumn
+            // 
+            this.hosSexoDataGridViewTextBoxColumn.DataPropertyName = "Hos_Sexo";
+            this.hosSexoDataGridViewTextBoxColumn.HeaderText = "Hos_Sexo";
+            this.hosSexoDataGridViewTextBoxColumn.Name = "hosSexoDataGridViewTextBoxColumn";
+            this.hosSexoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hosDataNascimentoDataGridViewTextBoxColumn
+            // 
+            this.hosDataNascimentoDataGridViewTextBoxColumn.DataPropertyName = "Hos_DataNascimento";
+            this.hosDataNascimentoDataGridViewTextBoxColumn.HeaderText = "Hos_DataNascimento";
+            this.hosDataNascimentoDataGridViewTextBoxColumn.Name = "hosDataNascimentoDataGridViewTextBoxColumn";
+            this.hosDataNascimentoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hosTelefoneDataGridViewTextBoxColumn
+            // 
+            this.hosTelefoneDataGridViewTextBoxColumn.DataPropertyName = "Hos_Telefone";
+            this.hosTelefoneDataGridViewTextBoxColumn.HeaderText = "Hos_Telefone";
+            this.hosTelefoneDataGridViewTextBoxColumn.Name = "hosTelefoneDataGridViewTextBoxColumn";
+            this.hosTelefoneDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hosEMailDataGridViewTextBoxColumn
+            // 
+            this.hosEMailDataGridViewTextBoxColumn.DataPropertyName = "Hos_EMail";
+            this.hosEMailDataGridViewTextBoxColumn.HeaderText = "Hos_EMail";
+            this.hosEMailDataGridViewTextBoxColumn.Name = "hosEMailDataGridViewTextBoxColumn";
+            this.hosEMailDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tbHospedeBindingSource
+            // 
+            this.tbHospedeBindingSource.DataMember = "tbHospede";
+            this.tbHospedeBindingSource.DataSource = this.hotelBDDataSet;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(50, 11);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(352, 20);
+            this.textBox1.TabIndex = 45;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.TabIndex = 47;
+            this.label2.Text = "Nome:";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(408, 10);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 46;
+            this.button1.Text = "&Buscar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalvar.Location = new System.Drawing.Point(11, 309);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
+            this.btnSalvar.TabIndex = 37;
+            this.btnSalvar.Text = "&Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelar.Location = new System.Drawing.Point(708, 309);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 38;
+            this.btnCancelar.Text = "&Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // tbHospedeTableAdapter
+            // 
+            this.tbHospedeTableAdapter.ClearBeforeFill = true;
+            // 
+            // tbUnidadeHabitacionalTableAdapter
+            // 
+            this.tbUnidadeHabitacionalTableAdapter.ClearBeforeFill = true;
+            // 
             // FrmRegistrarCheckIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -590,13 +641,13 @@
             this.tabControl1.ResumeLayout(false);
             this.tabpUnidadeHabitacional.ResumeLayout(false);
             this.tabpUnidadeHabitacional.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUnidadeHabitacional)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbUnidadeHabitacionalBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelBDDataSet)).EndInit();
             this.tabpHospede.ResumeLayout(false);
             this.tabpHospede.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHospede)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hotelBDDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbHospedeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUnidadeHabitacional)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbUnidadeHabitacionalBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -617,7 +668,6 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label lblDataCheckOut;
         private System.Windows.Forms.DateTimePicker dtpDataCheckOut;
-        private System.Windows.Forms.CheckBox cboStatus;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabpUnidadeHabitacional;
         private System.Windows.Forms.TextBox txtASK;
@@ -655,5 +705,11 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn uniClimatizadorDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn uniFrigobarDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn uniWirelessDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.ComboBox cbbStatus;
+        private System.Windows.Forms.TextBox txtDespesas;
+        private System.Windows.Forms.TextBox txtCpfHos;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblGastos;
     }
 }

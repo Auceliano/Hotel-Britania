@@ -37,5 +37,9 @@ namespace Hotel_Britania
             txtDespesas.Text = Convert.ToString(differenceInDays * Convert.ToDouble(unidade.ValorDiariaUni));
         }
 
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

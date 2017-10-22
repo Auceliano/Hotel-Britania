@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistrarCheckOut));
             this.gpbCheck = new System.Windows.Forms.GroupBox();
+            this.txtDespesas = new System.Windows.Forms.TextBox();
             this.txtCpfHos = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNomeHospede = new System.Windows.Forms.TextBox();
@@ -51,7 +52,6 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnRemover = new System.Windows.Forms.Button();
-            this.txtDespesas = new System.Windows.Forms.TextBox();
             this.gpbCheck.SuspendLayout();
             this.gpbBuscaCheckIn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataBusCheck)).BeginInit();
@@ -77,6 +77,14 @@
             this.gpbCheck.TabIndex = 42;
             this.gpbCheck.TabStop = false;
             this.gpbCheck.Text = "Check";
+            // 
+            // txtDespesas
+            // 
+            this.txtDespesas.Enabled = false;
+            this.txtDespesas.Location = new System.Drawing.Point(6, 258);
+            this.txtDespesas.Name = "txtDespesas";
+            this.txtDespesas.Size = new System.Drawing.Size(259, 20);
+            this.txtDespesas.TabIndex = 27;
             // 
             // txtCpfHos
             // 
@@ -250,6 +258,7 @@
             this.btnSalvar.TabIndex = 40;
             this.btnSalvar.Text = "&Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnCancelar
             // 
@@ -269,14 +278,6 @@
             this.btnRemover.TabIndex = 44;
             this.btnRemover.Text = "&Limpar Campos";
             this.btnRemover.UseVisualStyleBackColor = true;
-            // 
-            // txtDespesas
-            // 
-            this.txtDespesas.Enabled = false;
-            this.txtDespesas.Location = new System.Drawing.Point(6, 258);
-            this.txtDespesas.Name = "txtDespesas";
-            this.txtDespesas.Size = new System.Drawing.Size(259, 20);
-            this.txtDespesas.TabIndex = 27;
             // 
             // FrmRegistrarCheckOut
             // 
